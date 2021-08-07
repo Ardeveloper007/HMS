@@ -197,6 +197,7 @@ namespace HMS.Doctors
             }
             return PaymentId;
         }
+        //SaveFileDialog voucher
         private void btnSavevoucher_Click(object sender, EventArgs e)
         {
             try
