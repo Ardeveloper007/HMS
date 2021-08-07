@@ -1,0 +1,593 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="dbHostiptalERPModelStoreContainer" CdmEntityContainer="dbHostiptalERPEntities">
+    <EntitySetMapping Name="C__MigrationHistory">
+      <EntityTypeMapping TypeName="dbHostiptalERPModel.C__MigrationHistory">
+        <MappingFragment StoreEntitySet="__MigrationHistory">
+          <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
+          <ScalarProperty Name="ContextKey" ColumnName="ContextKey" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetRoles">
+      <EntityTypeMapping TypeName="dbHostiptalERPModel.AspNetRole">
+        <MappingFragment StoreEntitySet="AspNetRoles">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUserClaims">
+      <EntityTypeMapping TypeName="dbHostiptalERPModel.AspNetUserClaim">
+        <MappingFragment StoreEntitySet="AspNetUserClaims">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ClaimType" ColumnName="ClaimType" />
+          <ScalarProperty Name="ClaimValue" ColumnName="ClaimValue" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUserLogins">
+      <EntityTypeMapping TypeName="dbHostiptalERPModel.AspNetUserLogin">
+        <MappingFragment StoreEntitySet="AspNetUserLogins">
+          <ScalarProperty Name="LoginProvider" ColumnName="LoginProvider" />
+          <ScalarProperty Name="ProviderKey" ColumnName="ProviderKey" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUsers">
+      <EntityTypeMapping TypeName="dbHostiptalERPModel.AspNetUser">
+        <MappingFragment StoreEntitySet="AspNetUsers">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="CompanyId" ColumnName="CompanyId" />
+          <ScalarProperty Name="BranchId" ColumnName="BranchId" />
+          <ScalarProperty Name="Role_Id" ColumnName="Role_Id" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="EntryUser" ColumnName="EntryUser" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ScreenDefinitions">
+      <EntityTypeMapping TypeName="dbHostiptalERPModel.ScreenDefinition">
+        <MappingFragment StoreEntitySet="ScreenDefinition">
+          <ScalarProperty Name="ScreenId" ColumnName="ScreenId" />
+          <ScalarProperty Name="ScreenName" ColumnName="ScreenName" />
+          <ScalarProperty Name="ScreenAlias" ColumnName="ScreenAlias" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ScreenRights">
+      <EntityTypeMapping TypeName="dbHostiptalERPModel.ScreenRight">
+        <MappingFragment StoreEntitySet="ScreenRight">
+          <ScalarProperty Name="ScreenRightId" ColumnName="ScreenRightId" />
+          <ScalarProperty Name="ScreenRightName" ColumnName="ScreenRightName" />
+          <ScalarProperty Name="ScreenId" ColumnName="ScreenId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_InventoryTransaction">
+      <EntityTypeMapping TypeName="dbHostiptalERPModel.tbl_InventoryTransaction">
+        <MappingFragment StoreEntitySet="tbl_InventoryTransaction">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="RefDocumentTypeId" ColumnName="RefDocumentTypeId" />
+          <ScalarProperty Name="RefDocIdNo" ColumnName="RefDocIdNo" />
+          <ScalarProperty Name="DocDate" ColumnName="DocDate" />
+          <ScalarProperty Name="SupplierCustomerId" ColumnName="SupplierCustomerId" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+          <ScalarProperty Name="QtyIn" ColumnName="QtyIn" />
+          <ScalarProperty Name="QtyOut" ColumnName="QtyOut" />
+          <ScalarProperty Name="ItemRate" ColumnName="ItemRate" />
+          <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Item_Allocation">
+      <EntityTypeMapping TypeName="dbHostiptalERPModel.tbl_Item_Allocation">
+        <MappingFragment StoreEntitySet="tbl_Item_Allocation">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Item_Id" ColumnName="Item_Id" />
+          <ScalarProperty Name="PurchaseAccount" ColumnName="PurchaseAccount" />
+          <ScalarProperty Name="SaleAccount" ColumnName="SaleAccount" />
+          <ScalarProperty Name="COGSGLAC" ColumnName="COGSGLAC" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Entry_Date" ColumnName="Entry_Date" />
+          <ScalarProperty Name="Modify_Date" ColumnName="Modify_Date" />
+          <ScalarProperty Name="Entry_User" ColumnName="Entry_User" />
+          <ScalarProperty Name="Modify_User" ColumnName="Modify_User" />
+          <ScalarProperty Name="Company_Id" ColumnName="Company_Id" />
+          <ScalarProperty Name="Branch_Id" ColumnName="Branch_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_Item_Def">
+      <EntityTypeMapping TypeName="dbHostiptalERPModel.tbl_Item_Def">
+        <MappingFragment StoreEntitySet="tbl_Item_Def">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Category_Id" ColumnName="Category_Id" />
+          <ScalarProperty Name="Item_Name" ColumnName="Item_Name" />
+          <ScalarProperty Name="PackQty" ColumnName="PackQty" />
+          <ScalarProperty Name="Entry_Date" ColumnName="Entry_Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_PurchaseDetail">
+      <EntityTypeMapping TypeName="dbHostiptalERPModel.tbl_PurchaseDetail">
+        <MappingFragment StoreEntitySet="tbl_PurchaseDetail">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="PurchaseMaster_Id" ColumnName="PurchaseMaster_Id" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+          <ScalarProperty Name="PackQty" ColumnName="PackQty" />
+          <ScalarProperty Name="ItemQty" ColumnName="ItemQty" />
+          <ScalarProperty Name="NetQty" ColumnName="NetQty" />
+          <ScalarProperty Name="UnitRate" ColumnName="UnitRate" />
+          <ScalarProperty Name="ItemRate" ColumnName="ItemRate" />
+          <ScalarProperty Name="ItemAmount" ColumnName="ItemAmount" />
+          <ScalarProperty Name="BillAmount" ColumnName="BillAmount" />
+          <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
+          <ScalarProperty Name="RemarksDetail" ColumnName="RemarksDetail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_PurchaseMaster">
+      <EntityTypeMapping TypeName="dbHostiptalERPModel.tbl_PurchaseMaster">
+        <MappingFragment StoreEntitySet="tbl_PurchaseMaster">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OrderNo" ColumnName="OrderNo" />
+          <ScalarProperty Name="DocumentTypeId" ColumnName="DocumentTypeId" />
+          <ScalarProperty Name="DocDate" ColumnName="DocDate" />
+          <ScalarProperty Name="SupplierCustomerId" ColumnName="SupplierCustomerId" />
+          <ScalarProperty Name="ManualBillNo" ColumnName="ManualBillNo" />
+          <ScalarProperty Name="BillAmount" ColumnName="BillAmount" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="Entry_Date" ColumnName="Entry_Date" />
+          <ScalarProperty Name="Modify_Date" ColumnName="Modify_Date" />
+          <ScalarProperty Name="Entry_User" ColumnName="Entry_User" />
+          <ScalarProperty Name="Modify_User" ColumnName="Modify_User" />
+          <ScalarProperty Name="Company_Id" ColumnName="Company_Id" />
+          <ScalarProperty Name="Branch_Id" ColumnName="Branch_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_PurchaseReturnDetail">
+      <EntityTypeMapping TypeName="dbHostiptalERPModel.tbl_PurchaseReturnDetail">
+        <MappingFragment StoreEntitySet="tbl_PurchaseReturnDetail">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="PurchaseReturnMaster_Id" ColumnName="PurchaseReturnMaster_Id" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+          <ScalarProperty Name="PackQty" ColumnName="PackQty" />
+          <ScalarProperty Name="ItemQty" ColumnName="ItemQty" />
+          <ScalarProperty Name="NetQty" ColumnName="NetQty" />
+          <ScalarProperty Name="UnitRate" ColumnName="UnitRate" />
+          <ScalarProperty Name="ItemRate" ColumnName="ItemRate" />
+          <ScalarProperty Name="ItemAmount" ColumnName="ItemAmount" />
+          <ScalarProperty Name="BillAmount" ColumnName="BillAmount" />
+          <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
+          <ScalarProperty Name="RemarksDetail" ColumnName="RemarksDetail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_PurchaseReturnMaster">
+      <EntityTypeMapping TypeName="dbHostiptalERPModel.tbl_PurchaseReturnMaster">
+        <MappingFragment StoreEntitySet="tbl_PurchaseReturnMaster">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DocumentTypeId" ColumnName="DocumentTypeId" />
+          <ScalarProperty Name="DocDate" ColumnName="DocDate" />
+          <ScalarProperty Name="OrderNo" ColumnName="OrderNo" />
+          <ScalarProperty Name="SupplierCustomerId" ColumnName="SupplierCustomerId" />
+          <ScalarProperty Name="ManualBillNo" ColumnName="ManualBillNo" />
+          <ScalarProperty Name="BillAmount" ColumnName="BillAmount" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="Entry_Date" ColumnName="Entry_Date" />
+          <ScalarProperty Name="Modify_Date" ColumnName="Modify_Date" />
+          <ScalarProperty Name="Entry_User" ColumnName="Entry_User" />
+          <ScalarProperty Name="Modify_User" ColumnName="Modify_User" />
+          <ScalarProperty Name="Company_Id" ColumnName="Company_Id" />
+          <ScalarProperty Name="Branch_Id" ColumnName="Branch_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_SaleDetail">
+      <EntityTypeMapping TypeName="dbHostiptalERPModel.tbl_SaleDetail">
+        <MappingFragment StoreEntitySet="tbl_SaleDetail">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="SaleMaster_Id" ColumnName="SaleMaster_Id" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+          <ScalarProperty Name="ItemQty" ColumnName="ItemQty" />
+          <ScalarProperty Name="UnitRate" ColumnName="UnitRate" />
+          <ScalarProperty Name="ItemRate" ColumnName="ItemRate" />
+          <ScalarProperty Name="ItemAmount" ColumnName="ItemAmount" />
+          <ScalarProperty Name="BillAmount" ColumnName="BillAmount" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="FinalAmount" ColumnName="FinalAmount" />
+          <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
+          <ScalarProperty Name="RemarksDetail" ColumnName="RemarksDetail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_SaleMaster">
+      <EntityTypeMapping TypeName="dbHostiptalERPModel.tbl_SaleMaster">
+        <MappingFragment StoreEntitySet="tbl_SaleMaster">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OrderNo" ColumnName="OrderNo" />
+          <ScalarProperty Name="DocumentTypeId" ColumnName="DocumentTypeId" />
+          <ScalarProperty Name="DocDate" ColumnName="DocDate" />
+          <ScalarProperty Name="SupplierCustomerId" ColumnName="SupplierCustomerId" />
+          <ScalarProperty Name="ManualBillNo" ColumnName="ManualBillNo" />
+          <ScalarProperty Name="BillAmount" ColumnName="BillAmount" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="Entry_Date" ColumnName="Entry_Date" />
+          <ScalarProperty Name="Modify_Date" ColumnName="Modify_Date" />
+          <ScalarProperty Name="Entry_User" ColumnName="Entry_User" />
+          <ScalarProperty Name="Modify_User" ColumnName="Modify_User" />
+          <ScalarProperty Name="Company_Id" ColumnName="Company_Id" />
+          <ScalarProperty Name="Branch_Id" ColumnName="Branch_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_SaleReturnDetail">
+      <EntityTypeMapping TypeName="dbHostiptalERPModel.tbl_SaleReturnDetail">
+        <MappingFragment StoreEntitySet="tbl_SaleReturnDetail">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="SaleReturnMaster_Id" ColumnName="SaleReturnMaster_Id" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+          <ScalarProperty Name="ItemQty" ColumnName="ItemQty" />
+          <ScalarProperty Name="UnitRate" ColumnName="UnitRate" />
+          <ScalarProperty Name="ItemRate" ColumnName="ItemRate" />
+          <ScalarProperty Name="ItemAmount" ColumnName="ItemAmount" />
+          <ScalarProperty Name="BillAmount" ColumnName="BillAmount" />
+          <ScalarProperty Name="Discount" ColumnName="Discount" />
+          <ScalarProperty Name="FinalAmount" ColumnName="FinalAmount" />
+          <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
+          <ScalarProperty Name="RemarksDetail" ColumnName="RemarksDetail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_SaleReturnMaster">
+      <EntityTypeMapping TypeName="dbHostiptalERPModel.tbl_SaleReturnMaster">
+        <MappingFragment StoreEntitySet="tbl_SaleReturnMaster">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OrderNo" ColumnName="OrderNo" />
+          <ScalarProperty Name="DocumentTypeId" ColumnName="DocumentTypeId" />
+          <ScalarProperty Name="DocDate" ColumnName="DocDate" />
+          <ScalarProperty Name="SupplierCustomerId" ColumnName="SupplierCustomerId" />
+          <ScalarProperty Name="ManualBillNo" ColumnName="ManualBillNo" />
+          <ScalarProperty Name="BillAmount" ColumnName="BillAmount" />
+          <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+          <ScalarProperty Name="Entry_Date" ColumnName="Entry_Date" />
+          <ScalarProperty Name="Modify_Date" ColumnName="Modify_Date" />
+          <ScalarProperty Name="Entry_User" ColumnName="Entry_User" />
+          <ScalarProperty Name="Modify_User" ColumnName="Modify_User" />
+          <ScalarProperty Name="Company_Id" ColumnName="Company_Id" />
+          <ScalarProperty Name="Branch_Id" ColumnName="Branch_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblActivityLogs">
+      <EntityTypeMapping TypeName="dbHostiptalERPModel.tblActivityLog">
+        <MappingFragment StoreEntitySet="tblActivityLogs">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="User_Id" ColumnName="User_Id" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Datetime" ColumnName="Datetime" />
+          <ScalarProperty Name="Activity" ColumnName="Activity" />
+          <ScalarProperty Name="Screen_Name" ColumnName="Screen_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblBranches">
+      <EntityTypeMapping TypeName="dbHostiptalERPModel.tblBranch">
+        <MappingFragment StoreEntitySet="tblBranches">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Branch_Name" ColumnName="Branch_Name" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Contact_No" ColumnName="Contact_No" />
+          <ScalarProperty Name="Entry_Date" ColumnName="Entry_Date" />
+          <ScalarProperty Name="Modify_Date" ColumnName="Modify_Date" />
+          <ScalarProperty Name="Entry_User" ColumnName="Entry_User" />
+          <ScalarProperty Name="Modify_User" ColumnName="Modify_User" />
+          <ScalarProperty Name="Company_Id" ColumnName="Company_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblCategories">
+      <EntityTypeMapping TypeName="dbHostiptalERPModel.tblCategory">
+        <MappingFragment StoreEntitySet="tblCategory">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Category_Name" ColumnName="Category_Name" />
+          <ScalarProperty Name="Entry_Date" ColumnName="Entry_Date" />
+          <ScalarProperty Name="Entry_User" ColumnName="Entry_User" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblCOAs">
+      <EntityTypeMapping TypeName="dbHostiptalERPModel.tblCOA">
+        <MappingFragment StoreEntitySet="tblCOA">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="SubAccount_Id" ColumnName="SubAccount_Id" />
+          <ScalarProperty Name="Account_Code" ColumnName="Account_Code" />
+          <ScalarProperty Name="Account_Title" ColumnName="Account_Title" />
+          <ScalarProperty Name="Entry_Date" ColumnName="Entry_Date" />
+          <ScalarProperty Name="Modify_Date" ColumnName="Modify_Date" />
+          <ScalarProperty Name="Entry_User" ColumnName="Entry_User" />
+          <ScalarProperty Name="Modify_User" ColumnName="Modify_User" />
+          <ScalarProperty Name="Company_Id" ColumnName="Company_Id" />
+          <ScalarProperty Name="Branch_Id" ColumnName="Branch_Id" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblCOAOpeningBalances">
+      <EntityTypeMapping TypeName="dbHostiptalERPModel.tblCOAOpeningBalance">
+        <MappingFragment StoreEntitySet="tblCOAOpeningBalance">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="COA_Id" ColumnName="COA_Id" />
+          <ScalarProperty Name="Debit" ColumnName="Debit" />
+          <ScalarProperty Name="Credit" ColumnName="Credit" />
+          <ScalarProperty Name="Entry_Date" ColumnName="Entry_Date" />
+          <ScalarProperty Name="Modify_Date" ColumnName="Modify_Date" />
+          <ScalarProperty Name="Entry_User" ColumnName="Entry_User" />
+          <ScalarProperty Name="Modify_User" ColumnName="Modify_User" />
+          <ScalarProperty Name="Company_Id" ColumnName="Company_Id" />
+          <ScalarProperty Name="Branch_Id" ColumnName="Branch_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblCompanies">
+      <EntityTypeMapping TypeName="dbHostiptalERPModel.tblCompany">
+        <MappingFragment StoreEntitySet="tblCompany">
+          <ScalarProperty Name="Company_Id" ColumnName="Company_Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="PhoneNo" ColumnName="PhoneNo" />
+          <ScalarProperty Name="Logo" ColumnName="Logo" />
+          <ScalarProperty Name="Entry_Date" ColumnName="Entry_Date" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Reporting_Title" ColumnName="Reporting_Title" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblDocumentTypes">
+      <EntityTypeMapping TypeName="dbHostiptalERPModel.tblDocumentType">
+        <MappingFragment StoreEntitySet="tblDocumentType">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Document_Type_Name" ColumnName="Document_Type_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblOPDs">
+      <EntityTypeMapping TypeName="dbHostiptalERPModel.tblOPD">
+        <MappingFragment StoreEntitySet="tblOPD">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Dr_Id" ColumnName="Dr_Id" />
+          <ScalarProperty Name="Customer_Id" ColumnName="Customer_Id" />
+          <ScalarProperty Name="Fees" ColumnName="Fees" />
+          <ScalarProperty Name="Datetime" ColumnName="Datetime" />
+          <ScalarProperty Name="Token_No" ColumnName="Token_No" />
+          <ScalarProperty Name="Visited" ColumnName="Visited" />
+          <ScalarProperty Name="Day" ColumnName="Day" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblParentAccounts">
+      <EntityTypeMapping TypeName="dbHostiptalERPModel.tblParentAccount">
+        <MappingFragment StoreEntitySet="tblParentAccount">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Parent_Account" ColumnName="Parent_Account" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Type_Name" ColumnName="Type_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblSubAccounts">
+      <EntityTypeMapping TypeName="dbHostiptalERPModel.tblSubAccount">
+        <MappingFragment StoreEntitySet="tblSubAccount">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="SubAccount_Name" ColumnName="SubAccount_Name" />
+          <ScalarProperty Name="Parent_Account_Id" ColumnName="Parent_Account_Id" />
+          <ScalarProperty Name="Company_Id" ColumnName="Company_Id" />
+          <ScalarProperty Name="Entry_Date" ColumnName="Entry_Date" />
+          <ScalarProperty Name="Modify_Date" ColumnName="Modify_Date" />
+          <ScalarProperty Name="Entry_User" ColumnName="Entry_User" />
+          <ScalarProperty Name="Modify_User" ColumnName="Modify_User" />
+          <ScalarProperty Name="Branch_Id" ColumnName="Branch_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblSupplierCustomers">
+      <EntityTypeMapping TypeName="dbHostiptalERPModel.tblSupplierCustomer">
+        <MappingFragment StoreEntitySet="tblSupplierCustomer">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Profile_Name" ColumnName="Profile_Name" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Contact_No" ColumnName="Contact_No" />
+          <ScalarProperty Name="Reporting_Title" ColumnName="Reporting_Title" />
+          <ScalarProperty Name="GlAccount_Id" ColumnName="GlAccount_Id" />
+          <ScalarProperty Name="SupplierCustomerType" ColumnName="SupplierCustomerType" />
+          <ScalarProperty Name="Entry_Date" ColumnName="Entry_Date" />
+          <ScalarProperty Name="Entry_User" ColumnName="Entry_User" />
+          <ScalarProperty Name="Modify_User" ColumnName="Modify_User" />
+          <ScalarProperty Name="Modify_Date" ColumnName="Modify_Date" />
+          <ScalarProperty Name="Company_Id" ColumnName="Company_Id" />
+          <ScalarProperty Name="Branch_Id" ColumnName="Branch_Id" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblSystemConfigrations">
+      <EntityTypeMapping TypeName="dbHostiptalERPModel.tblSystemConfigration">
+        <MappingFragment StoreEntitySet="tblSystemConfigrations">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Configration_Name" ColumnName="Configration_Name" />
+          <ScalarProperty Name="Configration_Value" ColumnName="Configration_Value" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblUserRights">
+      <EntityTypeMapping TypeName="dbHostiptalERPModel.TblUserRight">
+        <MappingFragment StoreEntitySet="TblUserRights">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ScreenId" ColumnName="ScreenId" />
+          <ScalarProperty Name="RightId" ColumnName="RightId" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblVoucherDetails">
+      <EntityTypeMapping TypeName="dbHostiptalERPModel.tblVoucherDetail">
+        <MappingFragment StoreEntitySet="tblVoucherDetail">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Voucher_Head_Id" ColumnName="Voucher_Head_Id" />
+          <ScalarProperty Name="COA_Id" ColumnName="COA_Id" />
+          <ScalarProperty Name="Against_COA_Id" ColumnName="Against_COA_Id" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="DebitAmount" ColumnName="DebitAmount" />
+          <ScalarProperty Name="CreditAmount" ColumnName="CreditAmount" />
+          <ScalarProperty Name="Item_Id" ColumnName="Item_Id" />
+          <ScalarProperty Name="ChequeNo" ColumnName="ChequeNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblVoucherHeads">
+      <EntityTypeMapping TypeName="dbHostiptalERPModel.tblVoucherHead">
+        <MappingFragment StoreEntitySet="tblVoucherHead">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DocumentType_Id" ColumnName="DocumentType_Id" />
+          <ScalarProperty Name="RefDocTypeId" ColumnName="RefDocTypeId" />
+          <ScalarProperty Name="RefDocNoId" ColumnName="RefDocNoId" />
+          <ScalarProperty Name="Voucher_Code" ColumnName="Voucher_Code" />
+          <ScalarProperty Name="Voucher_Date" ColumnName="Voucher_Date" />
+          <ScalarProperty Name="Voucher_Amount" ColumnName="Voucher_Amount" />
+          <ScalarProperty Name="RefrenceAccount" ColumnName="RefrenceAccount" />
+          <ScalarProperty Name="AgainstAccount" ColumnName="AgainstAccount" />
+          <ScalarProperty Name="Entry_User" ColumnName="Entry_User" />
+          <ScalarProperty Name="Branch_Id" ColumnName="Branch_Id" />
+          <ScalarProperty Name="Company_Id" ColumnName="Company_Id" />
+          <ScalarProperty Name="DoctorAmount" ColumnName="DoctorAmount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="AspNetUserRoles" TypeName="dbHostiptalERPModel.AspNetUserRoles" StoreEntitySet="AspNetUserRoles">
+      <EndProperty Name="AspNetRoles">
+        <ScalarProperty Name="Id" ColumnName="RoleId" />
+      </EndProperty>
+      <EndProperty Name="AspNetUsers">
+        <ScalarProperty Name="Id" ColumnName="UserId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <FunctionImportMapping FunctionImportName="GetExpiryWiseProductForSale" FunctionName="dbHostiptalERPModel.Store.GetExpiryWiseProductForSale">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbHostiptalERPModel.GetExpiryWiseProductForSale_Result">
+          <ScalarProperty Name="AvailableQty" ColumnName="AvailableQty" />
+          <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
+          <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetReminingAmounts" FunctionName="dbHostiptalERPModel.Store.GetReminingAmounts">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbHostiptalERPModel.GetReminingAmounts_Result">
+          <ScalarProperty Name="COAId" ColumnName="COAId" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="TotalReceivebles" ColumnName="TotalReceivebles" />
+          <ScalarProperty Name="Received" ColumnName="Received" />
+          <ScalarProperty Name="TotaPayables" ColumnName="TotaPayables" />
+          <ScalarProperty Name="Paid" ColumnName="Paid" />
+          <ScalarProperty Name="PendingReceiveables" ColumnName="PendingReceiveables" />
+          <ScalarProperty Name="PendingPayable" ColumnName="PendingPayable" />
+          <ScalarProperty Name="Remaining" ColumnName="Remaining" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetReminingAmountsForDoctor" FunctionName="dbHostiptalERPModel.Store.GetReminingAmountsForDoctor">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbHostiptalERPModel.GetReminingAmountsForDoctor_Result">
+          <ScalarProperty Name="COAId" ColumnName="COAId" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="TotaPayables" ColumnName="TotaPayables" />
+          <ScalarProperty Name="Paid" ColumnName="Paid" />
+          <ScalarProperty Name="Pending" ColumnName="Pending" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ItemWiseRevenue" FunctionName="dbHostiptalERPModel.Store.ItemWiseRevenue">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbHostiptalERPModel.ItemWiseRevenue_Result">
+          <ScalarProperty Name="ItemId" ColumnName="ItemId" />
+          <ScalarProperty Name="ItemCOAId" ColumnName="ItemCOAId" />
+          <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+          <ScalarProperty Name="PackQty" ColumnName="PackQty" />
+          <ScalarProperty Name="Purchase" ColumnName="Purchase" />
+          <ScalarProperty Name="PurchaseReturn" ColumnName="PurchaseReturn" />
+          <ScalarProperty Name="Sale" ColumnName="Sale" />
+          <ScalarProperty Name="SaleReturn" ColumnName="SaleReturn" />
+          <ScalarProperty Name="ItemRevenue" ColumnName="ItemRevenue" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Proc_GetUserRights_UserId" FunctionName="dbHostiptalERPModel.Store.Proc_GetUserRights_UserId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbHostiptalERPModel.Proc_GetUserRights_UserId_Result">
+          <ScalarProperty Name="ScreenID" ColumnName="ScreenID" />
+          <ScalarProperty Name="ScreenName" ColumnName="ScreenName" />
+          <ScalarProperty Name="ScreenAlias" ColumnName="ScreenAlias" />
+          <ScalarProperty Name="RightsID" ColumnName="RightsID" />
+          <ScalarProperty Name="ScreenRightName" ColumnName="ScreenRightName" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Proc_Payables_Rpt" FunctionName="dbHostiptalERPModel.Store.Proc_Payables_Rpt" />
+    <FunctionImportMapping FunctionImportName="Proc_tblUserRights_Insert" FunctionName="dbHostiptalERPModel.Store.Proc_tblUserRights_Insert" />
+    <FunctionImportMapping FunctionImportName="Proc_tblUserRights_UserId" FunctionName="dbHostiptalERPModel.Store.Proc_tblUserRights_UserId">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbHostiptalERPModel.Proc_tblUserRights_UserId_Result">
+          <ScalarProperty Name="ScreenID" ColumnName="ScreenID" />
+          <ScalarProperty Name="ScreenName" ColumnName="ScreenName" />
+          <ScalarProperty Name="ScreenAlias" ColumnName="ScreenAlias" />
+          <ScalarProperty Name="RightsID" ColumnName="RightsID" />
+          <ScalarProperty Name="ScreenRightName" ColumnName="ScreenRightName" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Proc_UserLogin" FunctionName="dbHostiptalERPModel.Store.Proc_UserLogin">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbHostiptalERPModel.Proc_UserLogin_Result">
+          <ScalarProperty Name="EntryUser" ColumnName="EntryUser" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Role_Id" ColumnName="Role_Id" />
+          <ScalarProperty Name="BranchId" ColumnName="BranchId" />
+          <ScalarProperty Name="CompanyId" ColumnName="CompanyId" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Proc_UserRights_DeleteByUserID" FunctionName="dbHostiptalERPModel.Store.Proc_UserRights_DeleteByUserID" />
+  </EntityContainerMapping>
+</Mapping>

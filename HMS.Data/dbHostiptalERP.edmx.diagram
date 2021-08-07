@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="64b1283562b84fb5afc32a954934ad95" Name="Diagram1">
+        <EntityTypeShape EntityType="dbHostiptalERPModel.C__MigrationHistory" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbHostiptalERPModel.AspNetRole" Width="1.5" PointX="0.75" PointY="41.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbHostiptalERPModel.AspNetUserClaim" Width="1.5" PointX="5.25" PointY="40.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbHostiptalERPModel.AspNetUserLogin" Width="1.5" PointX="5.25" PointY="43.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbHostiptalERPModel.AspNetUser" Width="1.5" PointX="3" PointY="42.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbHostiptalERPModel.ScreenDefinition" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbHostiptalERPModel.ScreenRight" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbHostiptalERPModel.tbl_InventoryTransaction" Width="1.5" PointX="12" PointY="73" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbHostiptalERPModel.tbl_Item_Allocation" Width="1.5" PointX="9.75" PointY="62.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbHostiptalERPModel.tbl_Item_Def" Width="1.5" PointX="7.5" PointY="84.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbHostiptalERPModel.tbl_PurchaseDetail" Width="1.5" PointX="12" PointY="64.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbHostiptalERPModel.tbl_PurchaseMaster" Width="1.5" PointX="5.25" PointY="45.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbHostiptalERPModel.tbl_PurchaseReturnDetail" Width="1.5" PointX="15" PointY="63.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbHostiptalERPModel.tbl_PurchaseReturnMaster" Width="1.5" PointX="8.25" PointY="43.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbHostiptalERPModel.tbl_SaleDetail" Width="1.5" PointX="12" PointY="59.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbHostiptalERPModel.tbl_SaleMaster" Width="1.5" PointX="8.25" PointY="37.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbHostiptalERPModel.tbl_SaleReturnDetail" Width="1.5" PointX="15" PointY="68.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbHostiptalERPModel.tbl_SaleReturnMaster" Width="1.5" PointX="8.25" PointY="49.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbHostiptalERPModel.tblActivityLog" Width="1.5" PointX="5.25" PointY="75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbHostiptalERPModel.tblBranch" Width="1.5" PointX="11.25" PointY="43.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbHostiptalERPModel.tblCategory" Width="1.5" PointX="5.25" PointY="84.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbHostiptalERPModel.tblCOA" Width="1.5" PointX="13.5" PointY="43.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbHostiptalERPModel.tblCOAOpeningBalance" Width="1.5" PointX="18.75" PointY="44.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbHostiptalERPModel.tblCompany" Width="1.5" PointX="0.75" PointY="43.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbHostiptalERPModel.tblDocumentType" Width="1.5" PointX="6" PointY="36.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbHostiptalERPModel.tblOPD" Width="1.5" PointX="15.75" PointY="49.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbHostiptalERPModel.tblParentAccount" Width="1.5" PointX="14.25" PointY="40.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbHostiptalERPModel.tblSubAccount" Width="1.5" PointX="16.5" PointY="44.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbHostiptalERPModel.tblSupplierCustomer" Width="1.5" PointX="18.75" PointY="49.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbHostiptalERPModel.tblSystemConfigration" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbHostiptalERPModel.TblUserRight" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbHostiptalERPModel.tblVoucherDetail" Width="1.5" PointX="18.75" PointY="39.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="dbHostiptalERPModel.tblVoucherHead" Width="1.5" PointX="16.5" PointY="39.125" IsExpanded="true" />
+        <AssociationConnector Association="dbHostiptalERPModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="dbHostiptalERPModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="dbHostiptalERPModel.FK_AspNetUsers_tblBranches" ManuallyRouted="false" />
+        <AssociationConnector Association="dbHostiptalERPModel.FK_AspNetUsers_tblCompany" ManuallyRouted="false" />
+        <AssociationConnector Association="dbHostiptalERPModel.FK_tbl_Item_Allocation_AspNetUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="dbHostiptalERPModel.FK_tbl_PurchaseMaster_AspNetUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="dbHostiptalERPModel.FK_tbl_PurchaseReturnMaster_AspNetUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="dbHostiptalERPModel.FK_tbl_SaleMaster_AspNetUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="dbHostiptalERPModel.FK_tbl_SaleReturnMaster_AspNetUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="dbHostiptalERPModel.FK_tblActivityLogs_AspNetUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="dbHostiptalERPModel.FK_tblBranches_AspNetUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="dbHostiptalERPModel.FK_tblBranches_AspNetUsers1" ManuallyRouted="false" />
+        <AssociationConnector Association="dbHostiptalERPModel.FK_tblCategory_AspNetUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="dbHostiptalERPModel.FK_tblCOA_AspNetUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="dbHostiptalERPModel.FK_tblCOAOpeningBalance_AspNetUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="dbHostiptalERPModel.FK_tblSubAccount_AspNetUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="dbHostiptalERPModel.FK_tblSubAccount_AspNetUsers1" ManuallyRouted="false" />
+        <AssociationConnector Association="dbHostiptalERPModel.FK_tblSupplierCustomer_AspNetUsers" ManuallyRouted="false" />
+        <AssociationConnector Association="dbHostiptalERPModel.FK_tbl_InventoryTransaction_tbl_Item_Allocation" ManuallyRouted="false" />
+        <AssociationConnector Association="dbHostiptalERPModel.FK_tbl_InventoryTransaction_tblCategory" ManuallyRouted="false" />
+        <AssociationConnector Association="dbHostiptalERPModel.FK_tbl_InventoryTransaction_tblSupplierCustomer" ManuallyRouted="false" />
+        <AssociationConnector Association="dbHostiptalERPModel.FK_tbl_Item_Allocation_tbl_Item_Def" ManuallyRouted="false" />
+        <AssociationConnector Association="dbHostiptalERPModel.FK_tbl_Item_Allocation_tblBranches" ManuallyRouted="false" />
+        <AssociationConnector Association="dbHostiptalERPModel.FK_tbl_Item_Allocation_tblCOA" ManuallyRouted="false" />
+        <AssociationConnector Association="dbHostiptalERPModel.FK_tbl_Item_Allocation_tblCOA1" ManuallyRouted="false" />
+        <AssociationConnector Association="dbHostiptalERPModel.FK_tbl_Item_Allocation_tblCOA2" ManuallyRouted="false" />
+        <AssociationConnector Association="dbHostiptalERPModel.FK_tbl_Item_Allocation_tblCompany" ManuallyRouted="false" />
+        <AssociationConnector Association="dbHostiptalERPModel.FK_tbl_PurchaseDetail_tbl_Item_Allocation" ManuallyRouted="false" />
+        <AssociationConnector Association="dbHostiptalERPModel.FK_tbl_PurchaseReturnDetail_tbl_Item_Allocation" ManuallyRouted="false" />
+        <AssociationConnector Association="dbHostiptalERPModel.FK_tbl_SaleDetail_tbl_Item_Allocation" ManuallyRouted="false" />
+        <AssociationConnector Association="dbHostiptalERPModel.FK_tbl_SaleReturnDetail_tbl_Item_Allocation" ManuallyRouted="false" />
+        <AssociationConnector Association="dbHostiptalERPModel.FK_tbl_Item_Def_tblCategory" ManuallyRouted="false" />
+        <AssociationConnector Association="dbHostiptalERPModel.FK_tbl_PurchaseDetail_tbl_PurchaseMaster" ManuallyRouted="false" />
+        <AssociationConnector Association="dbHostiptalERPModel.FK_tbl_PurchaseDetail_tblCategory" ManuallyRouted="false" />
+        <AssociationConnector Association="dbHostiptalERPModel.FK_tbl_PurchaseMaster_tblBranches" ManuallyRouted="false" />
+        <AssociationConnector Association="dbHostiptalERPModel.FK_tbl_PurchaseMaster_tblCompany" ManuallyRouted="false" />
+        <AssociationConnector Association="dbHostiptalERPModel.FK_tbl_PurchaseMaster_tblDocumentType1" ManuallyRouted="false" />
+        <AssociationConnector Association="dbHostiptalERPModel.FK_tbl_PurchaseMaster_tblSupplierCustomer1" ManuallyRouted="false" />
+        <AssociationConnector Association="dbHostiptalERPModel.FK_tbl_PurchaseReturnDetail_tbl_PurchaseReturnMaster" ManuallyRouted="false" />
+        <AssociationConnector Association="dbHostiptalERPModel.FK_tbl_PurchaseReturnDetail_tblCategory" ManuallyRouted="false" />
+        <AssociationConnector Association="dbHostiptalERPModel.FK_tbl_PurchaseReturnMaster_tblBranches" ManuallyRouted="false" />
+        <AssociationConnector Association="dbHostiptalERPModel.FK_tbl_PurchaseReturnMaster_tblCompany" ManuallyRouted="false" />
+        <AssociationConnector Association="dbHostiptalERPModel.FK_tbl_PurchaseReturnMaster_tblDocumentType" ManuallyRouted="false" />
+        <AssociationConnector Association="dbHostiptalERPModel.FK_tbl_PurchaseReturnMaster_tblSupplierCustomer" ManuallyRouted="false" />
+        <AssociationConnector Association="dbHostiptalERPModel.FK_tbl_SaleDetail_tbl_SaleMaster" ManuallyRouted="false" />
+        <AssociationConnector Association="dbHostiptalERPModel.FK_tbl_SaleDetail_tblCategory" ManuallyRouted="false" />
+        <AssociationConnector Association="dbHostiptalERPModel.FK_tbl_SaleMaster_tbl_SaleMaster" ManuallyRouted="false" />
+        <AssociationConnector Association="dbHostiptalERPModel.FK_tbl_SaleMaster_tblBranches" ManuallyRouted="false" />
+        <AssociationConnector Association="dbHostiptalERPModel.FK_tbl_SaleMaster_tblCompany" ManuallyRouted="false" />
+        <AssociationConnector Association="dbHostiptalERPModel.FK_tbl_SaleMaster_tblDocumentType" ManuallyRouted="false" />
+        <AssociationConnector Association="dbHostiptalERPModel.FK_tbl_SaleMaster_tblSupplierCustomer" ManuallyRouted="false" />
+        <AssociationConnector Association="dbHostiptalERPModel.FK_tbl_SaleReturnDetail_tbl_SaleReturnMaster" ManuallyRouted="false" />
+        <AssociationConnector Association="dbHostiptalERPModel.FK_tbl_SaleReturnDetail_tblCategory" ManuallyRouted="false" />
+        <AssociationConnector Association="dbHostiptalERPModel.FK_tbl_SaleReturnMaster_tblBranches" ManuallyRouted="false" />
+        <AssociationConnector Association="dbHostiptalERPModel.FK_tbl_SaleReturnMaster_tblCompany" ManuallyRouted="false" />
+        <AssociationConnector Association="dbHostiptalERPModel.FK_tbl_SaleReturnMaster_tblDocumentType" ManuallyRouted="false" />
+        <AssociationConnector Association="dbHostiptalERPModel.FK_tbl_SaleReturnMaster_tblSupplierCustomer" ManuallyRouted="false" />
+        <AssociationConnector Association="dbHostiptalERPModel.FK_tblBranches_tblCompany" ManuallyRouted="false" />
+        <AssociationConnector Association="dbHostiptalERPModel.FK_tblCOA_tblBranches" ManuallyRouted="false" />
+        <AssociationConnector Association="dbHostiptalERPModel.FK_tblCOAOpeningBalance_tblBranches" ManuallyRouted="false" />
+        <AssociationConnector Association="dbHostiptalERPModel.FK_tblSubAccount_tblBranches" ManuallyRouted="false" />
+        <AssociationConnector Association="dbHostiptalERPModel.FK_tblSupplierCustomer_tblBranches" ManuallyRouted="false" />
+        <AssociationConnector Association="dbHostiptalERPModel.FK_tblVoucherHead_tblBranches" ManuallyRouted="false" />
+        <AssociationConnector Association="dbHostiptalERPModel.FK_tblCOA_tblCompany" ManuallyRouted="false" />
+        <AssociationConnector Association="dbHostiptalERPModel.FK_tblCOA_tblSubAccount" ManuallyRouted="false" />
+        <AssociationConnector Association="dbHostiptalERPModel.FK_tblCOAOpeningBalance_tblCOA" ManuallyRouted="false" />
+        <AssociationConnector Association="dbHostiptalERPModel.FK_tblOPD_tblCOA" ManuallyRouted="false" />
+        <AssociationConnector Association="dbHostiptalERPModel.FK_tblSupplierCustomer_tblCOA" ManuallyRouted="false" />
+        <AssociationConnector Association="dbHostiptalERPModel.FK_tblCOAOpeningBalance_tblCompany" ManuallyRouted="false" />
+        <AssociationConnector Association="dbHostiptalERPModel.FK_tblSubAccount_tblCompany" ManuallyRouted="false" />
+        <AssociationConnector Association="dbHostiptalERPModel.FK_tblSupplierCustomer_tblCompany" ManuallyRouted="false" />
+        <AssociationConnector Association="dbHostiptalERPModel.FK_tblVoucherHead_tblCompany" ManuallyRouted="false" />
+        <AssociationConnector Association="dbHostiptalERPModel.FK_tblVoucherHead_tblDocumentType" ManuallyRouted="false" />
+        <AssociationConnector Association="dbHostiptalERPModel.FK_tblOPD_tblSupplierCustomer" ManuallyRouted="false" />
+        <AssociationConnector Association="dbHostiptalERPModel.FK_tblSubAccount_tblParentAccount" ManuallyRouted="false" />
+        <AssociationConnector Association="dbHostiptalERPModel.FK_tblVoucherDetail_tblVoucherHead" ManuallyRouted="false" />
+        <AssociationConnector Association="dbHostiptalERPModel.AspNetUserRoles" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

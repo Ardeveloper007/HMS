@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GridEXLayoutFile LayoutType="Janus.Windows.GridEX.GridEX" LayoutVersion="1.1">
+    <RootTable>
+        <Columns Collection="true" ElementName="Column">
+            <Column0 ID="Id">
+                <Caption>Id</Caption>
+                <DataTypeCode>String</DataTypeCode>
+                <DataMember>Id</DataMember>
+                <Key>Id</Key>
+                <Position>0</Position>
+                <Visible>False</Visible>
+            </Column0>
+            <Column1 ID="ProfileName">
+                <Caption>Profile Name</Caption>
+                <DataTypeCode>String</DataTypeCode>
+                <DataMember>ProfileName</DataMember>
+                <EditType>NoEdit</EditType>
+                <FilterEditType>TextBox</FilterEditType>
+                <Key>ProfileName</Key>
+                <Position>1</Position>
+                <Width>200</Width>
+            </Column1>
+            <Column2 ID="Contact#">
+                <Caption>Contact#</Caption>
+                <DataTypeCode>String</DataTypeCode>
+                <DataMember>Contact#</DataMember>
+                <EditType>NoEdit</EditType>
+                <FilterEditType>TextBox</FilterEditType>
+                <Key>Contact#</Key>
+                <Position>2</Position>
+                <Width>150</Width>
+            </Column2>
+            <Column3 ID="Address">
+                <Caption>Address</Caption>
+                <DataTypeCode>String</DataTypeCode>
+                <DataMember>Address</DataMember>
+                <EditType>NoEdit</EditType>
+                <FilterEditType>TextBox</FilterEditType>
+                <Key>Address</Key>
+                <Position>3</Position>
+                <Width>300</Width>
+            </Column3>
+            <Column4 ID="GLAccount">
+                <Caption>GLAccount</Caption>
+                <DataTypeCode>String</DataTypeCode>
+                <DataMember>GLAccount</DataMember>
+                <EditType>NoEdit</EditType>
+                <FilterEditType>TextBox</FilterEditType>
+                <Key>GLAccount</Key>
+                <Position>4</Position>
+                <Visible>False</Visible>
+                <Width>300</Width>
+            </Column4>
+            <Column5 ID="Typeount">
+                <Caption>Typeount</Caption>
+                <DataTypeCode>String</DataTypeCode>
+                <DataMember>Typeount</DataMember>
+                <Key>Typeount</Key>
+                <Position>5</Position>
+                <Visible>False</Visible>
+            </Column5>
+        </Columns>
+        <GroupCondition />
+    </RootTable>
+    <RowWithErrorsFormatStyle>
+        <PredefinedStyle>RowWithErrorsFormatStyle</PredefinedStyle>
+    </RowWithErrorsFormatStyle>
+    <LinkFormatStyle>
+        <PredefinedStyle>LinkFormatStyle</PredefinedStyle>
+    </LinkFormatStyle>
+    <CardCaptionFormatStyle>
+        <PredefinedStyle>CardCaptionFormatStyle</PredefinedStyle>
+    </CardCaptionFormatStyle>
+    <GroupByBoxFormatStyle>
+        <PredefinedStyle>GroupByBoxFormatStyle</PredefinedStyle>
+    </GroupByBoxFormatStyle>
+    <GroupByBoxInfoFormatStyle>
+        <PredefinedStyle>GroupByBoxInfoFormatStyle</PredefinedStyle>
+    </GroupByBoxInfoFormatStyle>
+    <GroupRowFormatStyle>
+        <PredefinedStyle>GroupRowFormatStyle</PredefinedStyle>
+    </GroupRowFormatStyle>
+    <HeaderFormatStyle>
+        <PredefinedStyle>HeaderFormatStyle</PredefinedStyle>
+    </HeaderFormatStyle>
+    <PreviewRowFormatStyle>
+        <PredefinedStyle>PreviewRowFormatStyle</PredefinedStyle>
+    </PreviewRowFormatStyle>
+    <RowFormatStyle>
+        <PredefinedStyle>RowFormatStyle</PredefinedStyle>
+    </RowFormatStyle>
+    <SelectedFormatStyle>
+        <PredefinedStyle>SelectedFormatStyle</PredefinedStyle>
+    </SelectedFormatStyle>
+    <SelectedInactiveFormatStyle>
+        <PredefinedStyle>SelectedInactiveFormatStyle</PredefinedStyle>
+    </SelectedInactiveFormatStyle>
+    <WatermarkImage />
+    <Font>Verdana, 8.25pt</Font>
+    <VisualStyle>Office2007</VisualStyle>
+    <AllowDelete>True</AllowDelete>
+    <AllowRemoveColumns>True</AllowRemoveColumns>
+    <FilterMode>Automatic</FilterMode>
+    <GroupByBoxVisible>False</GroupByBoxVisible>
+    <TotalRow>True</TotalRow>
+    <RecordNavigator>True</RecordNavigator>
+    <DynamicFiltering>True</DynamicFiltering>
+    <TotalRowPosition>BottomFixed</TotalRowPosition>
+    <FilterRowButtonStyle>ConditionOperatorDropDown</FilterRowButtonStyle>
+</GridEXLayoutFile>

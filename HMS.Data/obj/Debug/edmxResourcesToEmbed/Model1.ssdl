@@ -1,0 +1,1795 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbHostiptalERPModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="__MigrationHistory">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+      <PropertyRef Name="ContextKey" />
+    </Key>
+    <Property Name="MigrationId" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="ContextKey" Type="nvarchar" MaxLength="300" Nullable="false" />
+    <Property Name="Model" Type="varbinary(max)" Nullable="false" />
+    <Property Name="ProductVersion" Type="nvarchar" MaxLength="32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetRoles">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetUserClaims">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="ClaimType" Type="nvarchar(max)" />
+    <Property Name="ClaimValue" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="AspNetUserLogins">
+    <Key>
+      <PropertyRef Name="LoginProvider" />
+      <PropertyRef Name="ProviderKey" />
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="LoginProvider" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="ProviderKey" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetUserRoles">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="RoleId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetUsers">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Password" Type="nvarchar(max)" />
+    <Property Name="PhoneNumber" Type="nvarchar(max)" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="256" />
+    <Property Name="Address" Type="nvarchar(max)" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="250" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="250" />
+    <Property Name="CompanyId" Type="int" />
+    <Property Name="BranchId" Type="int" />
+    <Property Name="Role_Id" Type="int" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="EntryUser" Type="int" />
+  </EntityType>
+  <EntityType Name="ScreenDefinition">
+    <Key>
+      <PropertyRef Name="ScreenId" />
+    </Key>
+    <Property Name="ScreenId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ScreenName" Type="nvarchar" MaxLength="100" />
+    <Property Name="ScreenAlias" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="ScreenRight">
+    <Key>
+      <PropertyRef Name="ScreenRightId" />
+    </Key>
+    <Property Name="ScreenRightId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ScreenRightName" Type="nvarchar" MaxLength="50" />
+    <Property Name="ScreenId" Type="int" />
+  </EntityType>
+  <EntityType Name="tbl_InventoryTransaction">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RefDocumentTypeId" Type="int" />
+    <Property Name="RefDocIdNo" Type="int" />
+    <Property Name="DocDate" Type="date" />
+    <Property Name="SupplierCustomerId" Type="int" />
+    <Property Name="CategoryId" Type="int" />
+    <Property Name="ItemId" Type="int" />
+    <Property Name="QtyIn" Type="float" />
+    <Property Name="QtyOut" Type="float" />
+    <Property Name="ItemRate" Type="float" />
+    <Property Name="ExpiryDate" Type="date" />
+    <Property Name="Remarks" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="tbl_Item_Allocation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Item_Id" Type="int" />
+    <Property Name="PurchaseAccount" Type="int" />
+    <Property Name="SaleAccount" Type="int" />
+    <Property Name="COGSGLAC" Type="int" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="Entry_Date" Type="datetime" />
+    <Property Name="Modify_Date" Type="datetime" />
+    <Property Name="Entry_User" Type="int" />
+    <Property Name="Modify_User" Type="int" />
+    <Property Name="Company_Id" Type="int" />
+    <Property Name="Branch_Id" Type="int" />
+  </EntityType>
+  <EntityType Name="tbl_Item_Def">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Category_Id" Type="int" />
+    <Property Name="Item_Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="PackQty" Type="int" />
+    <Property Name="Entry_Date" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tbl_PurchaseDetail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PurchaseMaster_Id" Type="int" />
+    <Property Name="CategoryId" Type="int" />
+    <Property Name="ItemId" Type="int" />
+    <Property Name="PackQty" Type="int" />
+    <Property Name="ItemQty" Type="float" />
+    <Property Name="NetQty" Type="float" />
+    <Property Name="UnitRate" Type="float" />
+    <Property Name="ItemRate" Type="float" />
+    <Property Name="ItemAmount" Type="float" />
+    <Property Name="BillAmount" Type="float" />
+    <Property Name="ExpiryDate" Type="date" />
+    <Property Name="RemarksDetail" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="tbl_PurchaseMaster">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OrderNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="DocumentTypeId" Type="int" />
+    <Property Name="DocDate" Type="date" />
+    <Property Name="SupplierCustomerId" Type="int" />
+    <Property Name="ManualBillNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="BillAmount" Type="float" />
+    <Property Name="Remarks" Type="nvarchar" MaxLength="500" />
+    <Property Name="Entry_Date" Type="datetime" />
+    <Property Name="Modify_Date" Type="datetime" />
+    <Property Name="Entry_User" Type="int" />
+    <Property Name="Modify_User" Type="int" />
+    <Property Name="Company_Id" Type="int" />
+    <Property Name="Branch_Id" Type="int" />
+  </EntityType>
+  <EntityType Name="tbl_PurchaseReturnDetail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PurchaseReturnMaster_Id" Type="int" />
+    <Property Name="CategoryId" Type="int" />
+    <Property Name="ItemId" Type="int" />
+    <Property Name="PackQty" Type="int" />
+    <Property Name="ItemQty" Type="float" />
+    <Property Name="NetQty" Type="float" />
+    <Property Name="UnitRate" Type="float" />
+    <Property Name="ItemRate" Type="float" />
+    <Property Name="ItemAmount" Type="float" />
+    <Property Name="BillAmount" Type="float" />
+    <Property Name="ExpiryDate" Type="date" />
+    <Property Name="RemarksDetail" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="tbl_PurchaseReturnMaster">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DocumentTypeId" Type="int" />
+    <Property Name="DocDate" Type="date" />
+    <Property Name="OrderNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="SupplierCustomerId" Type="int" />
+    <Property Name="ManualBillNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="BillAmount" Type="float" />
+    <Property Name="Remarks" Type="nvarchar" MaxLength="500" />
+    <Property Name="Entry_Date" Type="datetime" />
+    <Property Name="Modify_Date" Type="datetime" />
+    <Property Name="Entry_User" Type="int" />
+    <Property Name="Modify_User" Type="int" />
+    <Property Name="Company_Id" Type="int" />
+    <Property Name="Branch_Id" Type="int" />
+  </EntityType>
+  <EntityType Name="tbl_SaleDetail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SaleMaster_Id" Type="int" />
+    <Property Name="CategoryId" Type="int" />
+    <Property Name="ItemId" Type="int" />
+    <Property Name="ItemQty" Type="float" />
+    <Property Name="UnitRate" Type="float" />
+    <Property Name="ItemRate" Type="float" />
+    <Property Name="ItemAmount" Type="float" />
+    <Property Name="BillAmount" Type="float" />
+    <Property Name="Discount" Type="float" />
+    <Property Name="FinalAmount" Type="float" />
+    <Property Name="ExpiryDate" Type="date" />
+    <Property Name="RemarksDetail" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="tbl_SaleMaster">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OrderNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="DocumentTypeId" Type="int" />
+    <Property Name="DocDate" Type="date" />
+    <Property Name="SupplierCustomerId" Type="int" />
+    <Property Name="ManualBillNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="BillAmount" Type="float" />
+    <Property Name="Remarks" Type="nvarchar" MaxLength="500" />
+    <Property Name="Entry_Date" Type="datetime" />
+    <Property Name="Modify_Date" Type="datetime" />
+    <Property Name="Entry_User" Type="int" />
+    <Property Name="Modify_User" Type="int" />
+    <Property Name="Company_Id" Type="int" />
+    <Property Name="Branch_Id" Type="int" />
+  </EntityType>
+  <EntityType Name="tbl_SaleReturnDetail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SaleReturnMaster_Id" Type="int" Nullable="false" />
+    <Property Name="CategoryId" Type="int" />
+    <Property Name="ItemId" Type="int" />
+    <Property Name="ItemQty" Type="float" />
+    <Property Name="UnitRate" Type="float" />
+    <Property Name="ItemRate" Type="float" />
+    <Property Name="ItemAmount" Type="float" />
+    <Property Name="BillAmount" Type="float" />
+    <Property Name="Discount" Type="float" />
+    <Property Name="FinalAmount" Type="float" />
+    <Property Name="ExpiryDate" Type="date" />
+    <Property Name="RemarksDetail" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="tbl_SaleReturnMaster">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OrderNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="DocumentTypeId" Type="int" />
+    <Property Name="DocDate" Type="date" />
+    <Property Name="SupplierCustomerId" Type="int" />
+    <Property Name="ManualBillNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="BillAmount" Type="float" />
+    <Property Name="Remarks" Type="nvarchar" MaxLength="500" />
+    <Property Name="Entry_Date" Type="datetime" />
+    <Property Name="Modify_Date" Type="datetime" />
+    <Property Name="Entry_User" Type="int" />
+    <Property Name="Modify_User" Type="int" />
+    <Property Name="Company_Id" Type="int" />
+    <Property Name="Branch_Id" Type="int" />
+  </EntityType>
+  <EntityType Name="tblActivityLogs">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="User_Id" Type="int" />
+    <Property Name="Date" Type="date" />
+    <Property Name="Datetime" Type="datetime" />
+    <Property Name="Activity" Type="nvarchar" MaxLength="50" />
+    <Property Name="Screen_Name" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblBranches">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Branch_Name" Type="nvarchar" MaxLength="500" />
+    <Property Name="Address" Type="nvarchar(max)" />
+    <Property Name="Email" Type="nvarchar" MaxLength="500" />
+    <Property Name="Contact_No" Type="nvarchar" MaxLength="500" />
+    <Property Name="Entry_Date" Type="datetime" />
+    <Property Name="Modify_Date" Type="datetime" />
+    <Property Name="Entry_User" Type="int" />
+    <Property Name="Modify_User" Type="int" />
+    <Property Name="Company_Id" Type="int" />
+  </EntityType>
+  <EntityType Name="tblCategory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Category_Name" Type="nvarchar" MaxLength="550" />
+    <Property Name="Entry_Date" Type="datetime" />
+    <Property Name="Entry_User" Type="int" />
+  </EntityType>
+  <EntityType Name="tblCOA">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SubAccount_Id" Type="int" />
+    <Property Name="Account_Code" Type="int" />
+    <Property Name="Account_Title" Type="nvarchar" MaxLength="550" />
+    <Property Name="Entry_Date" Type="datetime" />
+    <Property Name="Modify_Date" Type="datetime" />
+    <Property Name="Entry_User" Type="int" />
+    <Property Name="Modify_User" Type="int" />
+    <Property Name="Company_Id" Type="int" />
+    <Property Name="Branch_Id" Type="int" />
+    <Property Name="IsActive" Type="bit" />
+  </EntityType>
+  <EntityType Name="tblCOAOpeningBalance">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="COA_Id" Type="int" />
+    <Property Name="Debit" Type="float" />
+    <Property Name="Credit" Type="float" />
+    <Property Name="Entry_Date" Type="datetime" />
+    <Property Name="Modify_Date" Type="datetime" />
+    <Property Name="Entry_User" Type="int" />
+    <Property Name="Modify_User" Type="int" />
+    <Property Name="Company_Id" Type="int" />
+    <Property Name="Branch_Id" Type="int" />
+  </EntityType>
+  <EntityType Name="tblCompany">
+    <Key>
+      <PropertyRef Name="Company_Id" />
+    </Key>
+    <Property Name="Company_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="250" />
+    <Property Name="Address" Type="nvarchar(max)" />
+    <Property Name="PhoneNo" Type="nvarchar" MaxLength="250" />
+    <Property Name="Logo" Type="nvarchar(max)" />
+    <Property Name="Entry_Date" Type="datetime" />
+    <Property Name="Email" Type="nvarchar" MaxLength="250" />
+    <Property Name="Reporting_Title" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="tblDocumentType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Document_Type_Name" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="tblOPD">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Dr_Id" Type="int" />
+    <Property Name="Customer_Id" Type="int" />
+    <Property Name="Fees" Type="float" />
+    <Property Name="Datetime" Type="datetime" />
+    <Property Name="Token_No" Type="int" />
+    <Property Name="Visited" Type="bit" />
+    <Property Name="Day" Type="date" />
+  </EntityType>
+  <EntityType Name="tblParentAccount">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Parent_Account" Type="nvarchar" MaxLength="250" />
+    <Property Name="Type" Type="int" />
+    <Property Name="Type_Name" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblSubAccount">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SubAccount_Name" Type="nvarchar" MaxLength="250" />
+    <Property Name="Parent_Account_Id" Type="int" />
+    <Property Name="Company_Id" Type="int" />
+    <Property Name="Entry_Date" Type="datetime" />
+    <Property Name="Modify_Date" Type="datetime" />
+    <Property Name="Entry_User" Type="int" />
+    <Property Name="Modify_User" Type="int" />
+    <Property Name="Branch_Id" Type="int" />
+  </EntityType>
+  <EntityType Name="tblSupplierCustomer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Profile_Name" Type="nvarchar" MaxLength="550" />
+    <Property Name="Address" Type="nvarchar" MaxLength="550" />
+    <Property Name="Contact_No" Type="nvarchar" MaxLength="550" />
+    <Property Name="Reporting_Title" Type="nvarchar" MaxLength="550" />
+    <Property Name="GlAccount_Id" Type="int" />
+    <Property Name="SupplierCustomerType" Type="nvarchar" MaxLength="50" />
+    <Property Name="Entry_Date" Type="datetime" />
+    <Property Name="Entry_User" Type="int" />
+    <Property Name="Modify_User" Type="int" />
+    <Property Name="Modify_Date" Type="datetime" />
+    <Property Name="Company_Id" Type="int" />
+    <Property Name="Branch_Id" Type="int" />
+    <Property Name="IsActive" Type="bit" />
+  </EntityType>
+  <EntityType Name="tblSystemConfigrations">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Configration_Name" Type="nvarchar(max)" />
+    <Property Name="Configration_Value" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="TblUserRights">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="int" />
+    <Property Name="ScreenId" Type="int" />
+    <Property Name="RightId" Type="int" />
+    <Property Name="Value" Type="bit" />
+  </EntityType>
+  <EntityType Name="tblVoucherDetail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Voucher_Head_Id" Type="int" />
+    <Property Name="COA_Id" Type="int" />
+    <Property Name="Against_COA_Id" Type="int" />
+    <Property Name="Comments" Type="nvarchar(max)" />
+    <Property Name="DebitAmount" Type="float" />
+    <Property Name="CreditAmount" Type="float" />
+    <Property Name="Item_Id" Type="int" />
+    <Property Name="ChequeNo" Type="nvarchar" MaxLength="550" />
+  </EntityType>
+  <EntityType Name="tblVoucherHead">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DocumentType_Id" Type="int" />
+    <Property Name="RefDocTypeId" Type="int" />
+    <Property Name="RefDocNoId" Type="int" />
+    <Property Name="Voucher_Code" Type="int" />
+    <Property Name="Voucher_Date" Type="datetime" />
+    <Property Name="Voucher_Amount" Type="float" />
+    <Property Name="RefrenceAccount" Type="int" />
+    <Property Name="AgainstAccount" Type="int" />
+    <Property Name="Entry_User" Type="int" />
+    <Property Name="Branch_Id" Type="int" />
+    <Property Name="Company_Id" Type="int" />
+    <Property Name="DoctorAmount" Type="float" />
+  </EntityType>
+  <Association Name="FK_AspNetUsers_tblBranches">
+    <End Role="tblBranches" Type="Self.tblBranches" Multiplicity="0..1" />
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblBranches">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUsers">
+        <PropertyRef Name="BranchId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AspNetUsers_tblCompany">
+    <End Role="tblCompany" Type="Self.tblCompany" Multiplicity="0..1" />
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCompany">
+        <PropertyRef Name="Company_Id" />
+      </Principal>
+      <Dependent Role="AspNetUsers">
+        <PropertyRef Name="CompanyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserClaims" Type="Self.AspNetUserClaims" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserClaims">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserLogins" Type="Self.AspNetUserLogins" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserLogins">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId">
+    <End Role="AspNetRoles" Type="Self.AspNetRoles" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserRoles" Type="Self.AspNetUserRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetRoles">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserRoles">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserRoles" Type="Self.AspNetUserRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserRoles">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_InventoryTransaction_tbl_Item_Allocation">
+    <End Role="tbl_Item_Allocation" Type="Self.tbl_Item_Allocation" Multiplicity="0..1" />
+    <End Role="tbl_InventoryTransaction" Type="Self.tbl_InventoryTransaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Item_Allocation">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tbl_InventoryTransaction">
+        <PropertyRef Name="ItemId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_InventoryTransaction_tblCategory">
+    <End Role="tblCategory" Type="Self.tblCategory" Multiplicity="0..1" />
+    <End Role="tbl_InventoryTransaction" Type="Self.tbl_InventoryTransaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCategory">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tbl_InventoryTransaction">
+        <PropertyRef Name="CategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_InventoryTransaction_tblSupplierCustomer">
+    <End Role="tblSupplierCustomer" Type="Self.tblSupplierCustomer" Multiplicity="0..1" />
+    <End Role="tbl_InventoryTransaction" Type="Self.tbl_InventoryTransaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblSupplierCustomer">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tbl_InventoryTransaction">
+        <PropertyRef Name="SupplierCustomerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Item_Allocation_AspNetUsers">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="0..1" />
+    <End Role="tbl_Item_Allocation" Type="Self.tbl_Item_Allocation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tbl_Item_Allocation">
+        <PropertyRef Name="Entry_User" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Item_Allocation_tbl_Item_Def">
+    <End Role="tbl_Item_Def" Type="Self.tbl_Item_Def" Multiplicity="0..1" />
+    <End Role="tbl_Item_Allocation" Type="Self.tbl_Item_Allocation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Item_Def">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tbl_Item_Allocation">
+        <PropertyRef Name="Item_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Item_Allocation_tblBranches">
+    <End Role="tblBranches" Type="Self.tblBranches" Multiplicity="0..1" />
+    <End Role="tbl_Item_Allocation" Type="Self.tbl_Item_Allocation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblBranches">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tbl_Item_Allocation">
+        <PropertyRef Name="Branch_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Item_Allocation_tblCOA">
+    <End Role="tblCOA" Type="Self.tblCOA" Multiplicity="0..1" />
+    <End Role="tbl_Item_Allocation" Type="Self.tbl_Item_Allocation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCOA">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tbl_Item_Allocation">
+        <PropertyRef Name="PurchaseAccount" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Item_Allocation_tblCOA1">
+    <End Role="tblCOA" Type="Self.tblCOA" Multiplicity="0..1" />
+    <End Role="tbl_Item_Allocation" Type="Self.tbl_Item_Allocation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCOA">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tbl_Item_Allocation">
+        <PropertyRef Name="SaleAccount" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Item_Allocation_tblCOA2">
+    <End Role="tblCOA" Type="Self.tblCOA" Multiplicity="0..1" />
+    <End Role="tbl_Item_Allocation" Type="Self.tbl_Item_Allocation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCOA">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tbl_Item_Allocation">
+        <PropertyRef Name="COGSGLAC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Item_Allocation_tblCompany">
+    <End Role="tblCompany" Type="Self.tblCompany" Multiplicity="0..1" />
+    <End Role="tbl_Item_Allocation" Type="Self.tbl_Item_Allocation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCompany">
+        <PropertyRef Name="Company_Id" />
+      </Principal>
+      <Dependent Role="tbl_Item_Allocation">
+        <PropertyRef Name="Company_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_Item_Def_tblCategory">
+    <End Role="tblCategory" Type="Self.tblCategory" Multiplicity="0..1" />
+    <End Role="tbl_Item_Def" Type="Self.tbl_Item_Def" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCategory">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tbl_Item_Def">
+        <PropertyRef Name="Category_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_PurchaseDetail_tbl_Item_Allocation">
+    <End Role="tbl_Item_Allocation" Type="Self.tbl_Item_Allocation" Multiplicity="0..1" />
+    <End Role="tbl_PurchaseDetail" Type="Self.tbl_PurchaseDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Item_Allocation">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tbl_PurchaseDetail">
+        <PropertyRef Name="ItemId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_PurchaseDetail_tbl_PurchaseMaster">
+    <End Role="tbl_PurchaseMaster" Type="Self.tbl_PurchaseMaster" Multiplicity="0..1" />
+    <End Role="tbl_PurchaseDetail" Type="Self.tbl_PurchaseDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_PurchaseMaster">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tbl_PurchaseDetail">
+        <PropertyRef Name="PurchaseMaster_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_PurchaseDetail_tblCategory">
+    <End Role="tblCategory" Type="Self.tblCategory" Multiplicity="0..1" />
+    <End Role="tbl_PurchaseDetail" Type="Self.tbl_PurchaseDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCategory">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tbl_PurchaseDetail">
+        <PropertyRef Name="CategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_PurchaseMaster_AspNetUsers">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="0..1" />
+    <End Role="tbl_PurchaseMaster" Type="Self.tbl_PurchaseMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tbl_PurchaseMaster">
+        <PropertyRef Name="Entry_User" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_PurchaseMaster_tblBranches">
+    <End Role="tblBranches" Type="Self.tblBranches" Multiplicity="0..1" />
+    <End Role="tbl_PurchaseMaster" Type="Self.tbl_PurchaseMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblBranches">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tbl_PurchaseMaster">
+        <PropertyRef Name="Branch_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_PurchaseMaster_tblCompany">
+    <End Role="tblCompany" Type="Self.tblCompany" Multiplicity="0..1" />
+    <End Role="tbl_PurchaseMaster" Type="Self.tbl_PurchaseMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCompany">
+        <PropertyRef Name="Company_Id" />
+      </Principal>
+      <Dependent Role="tbl_PurchaseMaster">
+        <PropertyRef Name="Company_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_PurchaseMaster_tblDocumentType1">
+    <End Role="tblDocumentType" Type="Self.tblDocumentType" Multiplicity="0..1" />
+    <End Role="tbl_PurchaseMaster" Type="Self.tbl_PurchaseMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblDocumentType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tbl_PurchaseMaster">
+        <PropertyRef Name="DocumentTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_PurchaseMaster_tblSupplierCustomer1">
+    <End Role="tblSupplierCustomer" Type="Self.tblSupplierCustomer" Multiplicity="0..1" />
+    <End Role="tbl_PurchaseMaster" Type="Self.tbl_PurchaseMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblSupplierCustomer">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tbl_PurchaseMaster">
+        <PropertyRef Name="SupplierCustomerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_PurchaseReturnDetail_tbl_Item_Allocation">
+    <End Role="tbl_Item_Allocation" Type="Self.tbl_Item_Allocation" Multiplicity="0..1" />
+    <End Role="tbl_PurchaseReturnDetail" Type="Self.tbl_PurchaseReturnDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Item_Allocation">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tbl_PurchaseReturnDetail">
+        <PropertyRef Name="ItemId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_PurchaseReturnDetail_tbl_PurchaseReturnMaster">
+    <End Role="tbl_PurchaseReturnMaster" Type="Self.tbl_PurchaseReturnMaster" Multiplicity="0..1" />
+    <End Role="tbl_PurchaseReturnDetail" Type="Self.tbl_PurchaseReturnDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_PurchaseReturnMaster">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tbl_PurchaseReturnDetail">
+        <PropertyRef Name="PurchaseReturnMaster_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_PurchaseReturnDetail_tblCategory">
+    <End Role="tblCategory" Type="Self.tblCategory" Multiplicity="0..1" />
+    <End Role="tbl_PurchaseReturnDetail" Type="Self.tbl_PurchaseReturnDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCategory">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tbl_PurchaseReturnDetail">
+        <PropertyRef Name="CategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_PurchaseReturnMaster_AspNetUsers">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="0..1" />
+    <End Role="tbl_PurchaseReturnMaster" Type="Self.tbl_PurchaseReturnMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tbl_PurchaseReturnMaster">
+        <PropertyRef Name="Entry_User" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_PurchaseReturnMaster_tblBranches">
+    <End Role="tblBranches" Type="Self.tblBranches" Multiplicity="0..1" />
+    <End Role="tbl_PurchaseReturnMaster" Type="Self.tbl_PurchaseReturnMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblBranches">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tbl_PurchaseReturnMaster">
+        <PropertyRef Name="Branch_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_PurchaseReturnMaster_tblCompany">
+    <End Role="tblCompany" Type="Self.tblCompany" Multiplicity="0..1" />
+    <End Role="tbl_PurchaseReturnMaster" Type="Self.tbl_PurchaseReturnMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCompany">
+        <PropertyRef Name="Company_Id" />
+      </Principal>
+      <Dependent Role="tbl_PurchaseReturnMaster">
+        <PropertyRef Name="Company_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_PurchaseReturnMaster_tblDocumentType">
+    <End Role="tblDocumentType" Type="Self.tblDocumentType" Multiplicity="0..1" />
+    <End Role="tbl_PurchaseReturnMaster" Type="Self.tbl_PurchaseReturnMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblDocumentType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tbl_PurchaseReturnMaster">
+        <PropertyRef Name="DocumentTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_PurchaseReturnMaster_tblSupplierCustomer">
+    <End Role="tblSupplierCustomer" Type="Self.tblSupplierCustomer" Multiplicity="0..1" />
+    <End Role="tbl_PurchaseReturnMaster" Type="Self.tbl_PurchaseReturnMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblSupplierCustomer">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tbl_PurchaseReturnMaster">
+        <PropertyRef Name="SupplierCustomerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_SaleDetail_tbl_Item_Allocation">
+    <End Role="tbl_Item_Allocation" Type="Self.tbl_Item_Allocation" Multiplicity="0..1" />
+    <End Role="tbl_SaleDetail" Type="Self.tbl_SaleDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Item_Allocation">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tbl_SaleDetail">
+        <PropertyRef Name="ItemId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_SaleDetail_tbl_SaleMaster">
+    <End Role="tbl_SaleMaster" Type="Self.tbl_SaleMaster" Multiplicity="0..1" />
+    <End Role="tbl_SaleDetail" Type="Self.tbl_SaleDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_SaleMaster">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tbl_SaleDetail">
+        <PropertyRef Name="SaleMaster_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_SaleDetail_tblCategory">
+    <End Role="tblCategory" Type="Self.tblCategory" Multiplicity="0..1" />
+    <End Role="tbl_SaleDetail" Type="Self.tbl_SaleDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCategory">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tbl_SaleDetail">
+        <PropertyRef Name="CategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_SaleMaster_AspNetUsers">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="0..1" />
+    <End Role="tbl_SaleMaster" Type="Self.tbl_SaleMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tbl_SaleMaster">
+        <PropertyRef Name="Entry_User" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_SaleMaster_tbl_SaleMaster">
+    <End Role="tbl_SaleMaster" Type="Self.tbl_SaleMaster" Multiplicity="1" />
+    <End Role="tbl_SaleMaster1" Type="Self.tbl_SaleMaster" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_SaleMaster">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tbl_SaleMaster1">
+        <PropertyRef Name="Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_SaleMaster_tblBranches">
+    <End Role="tblBranches" Type="Self.tblBranches" Multiplicity="0..1" />
+    <End Role="tbl_SaleMaster" Type="Self.tbl_SaleMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblBranches">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tbl_SaleMaster">
+        <PropertyRef Name="Branch_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_SaleMaster_tblCompany">
+    <End Role="tblCompany" Type="Self.tblCompany" Multiplicity="0..1" />
+    <End Role="tbl_SaleMaster" Type="Self.tbl_SaleMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCompany">
+        <PropertyRef Name="Company_Id" />
+      </Principal>
+      <Dependent Role="tbl_SaleMaster">
+        <PropertyRef Name="Company_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_SaleMaster_tblDocumentType">
+    <End Role="tblDocumentType" Type="Self.tblDocumentType" Multiplicity="0..1" />
+    <End Role="tbl_SaleMaster" Type="Self.tbl_SaleMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblDocumentType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tbl_SaleMaster">
+        <PropertyRef Name="DocumentTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_SaleMaster_tblSupplierCustomer">
+    <End Role="tblSupplierCustomer" Type="Self.tblSupplierCustomer" Multiplicity="0..1" />
+    <End Role="tbl_SaleMaster" Type="Self.tbl_SaleMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblSupplierCustomer">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tbl_SaleMaster">
+        <PropertyRef Name="SupplierCustomerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_SaleReturnDetail_tbl_Item_Allocation">
+    <End Role="tbl_Item_Allocation" Type="Self.tbl_Item_Allocation" Multiplicity="0..1" />
+    <End Role="tbl_SaleReturnDetail" Type="Self.tbl_SaleReturnDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_Item_Allocation">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tbl_SaleReturnDetail">
+        <PropertyRef Name="ItemId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_SaleReturnDetail_tbl_SaleReturnMaster">
+    <End Role="tbl_SaleReturnMaster" Type="Self.tbl_SaleReturnMaster" Multiplicity="1" />
+    <End Role="tbl_SaleReturnDetail" Type="Self.tbl_SaleReturnDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbl_SaleReturnMaster">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tbl_SaleReturnDetail">
+        <PropertyRef Name="SaleReturnMaster_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_SaleReturnDetail_tblCategory">
+    <End Role="tblCategory" Type="Self.tblCategory" Multiplicity="0..1" />
+    <End Role="tbl_SaleReturnDetail" Type="Self.tbl_SaleReturnDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCategory">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tbl_SaleReturnDetail">
+        <PropertyRef Name="CategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_SaleReturnMaster_AspNetUsers">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="0..1" />
+    <End Role="tbl_SaleReturnMaster" Type="Self.tbl_SaleReturnMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tbl_SaleReturnMaster">
+        <PropertyRef Name="Entry_User" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_SaleReturnMaster_tblBranches">
+    <End Role="tblBranches" Type="Self.tblBranches" Multiplicity="0..1" />
+    <End Role="tbl_SaleReturnMaster" Type="Self.tbl_SaleReturnMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblBranches">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tbl_SaleReturnMaster">
+        <PropertyRef Name="Branch_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_SaleReturnMaster_tblCompany">
+    <End Role="tblCompany" Type="Self.tblCompany" Multiplicity="0..1" />
+    <End Role="tbl_SaleReturnMaster" Type="Self.tbl_SaleReturnMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCompany">
+        <PropertyRef Name="Company_Id" />
+      </Principal>
+      <Dependent Role="tbl_SaleReturnMaster">
+        <PropertyRef Name="Company_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_SaleReturnMaster_tblDocumentType">
+    <End Role="tblDocumentType" Type="Self.tblDocumentType" Multiplicity="0..1" />
+    <End Role="tbl_SaleReturnMaster" Type="Self.tbl_SaleReturnMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblDocumentType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tbl_SaleReturnMaster">
+        <PropertyRef Name="DocumentTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tbl_SaleReturnMaster_tblSupplierCustomer">
+    <End Role="tblSupplierCustomer" Type="Self.tblSupplierCustomer" Multiplicity="0..1" />
+    <End Role="tbl_SaleReturnMaster" Type="Self.tbl_SaleReturnMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblSupplierCustomer">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tbl_SaleReturnMaster">
+        <PropertyRef Name="SupplierCustomerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblActivityLogs_AspNetUsers">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="0..1" />
+    <End Role="tblActivityLogs" Type="Self.tblActivityLogs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblActivityLogs">
+        <PropertyRef Name="User_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblBranches_AspNetUsers">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="0..1" />
+    <End Role="tblBranches" Type="Self.tblBranches" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblBranches">
+        <PropertyRef Name="Entry_User" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblBranches_AspNetUsers1">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="0..1" />
+    <End Role="tblBranches" Type="Self.tblBranches" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblBranches">
+        <PropertyRef Name="Modify_User" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblBranches_tblCompany">
+    <End Role="tblCompany" Type="Self.tblCompany" Multiplicity="0..1" />
+    <End Role="tblBranches" Type="Self.tblBranches" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCompany">
+        <PropertyRef Name="Company_Id" />
+      </Principal>
+      <Dependent Role="tblBranches">
+        <PropertyRef Name="Company_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblCategory_AspNetUsers">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="0..1" />
+    <End Role="tblCategory" Type="Self.tblCategory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblCategory">
+        <PropertyRef Name="Entry_User" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblCOA_AspNetUsers">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="0..1" />
+    <End Role="tblCOA" Type="Self.tblCOA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblCOA">
+        <PropertyRef Name="Entry_User" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblCOA_tblBranches">
+    <End Role="tblBranches" Type="Self.tblBranches" Multiplicity="0..1" />
+    <End Role="tblCOA" Type="Self.tblCOA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblBranches">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblCOA">
+        <PropertyRef Name="Branch_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblCOA_tblCompany">
+    <End Role="tblCompany" Type="Self.tblCompany" Multiplicity="0..1" />
+    <End Role="tblCOA" Type="Self.tblCOA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCompany">
+        <PropertyRef Name="Company_Id" />
+      </Principal>
+      <Dependent Role="tblCOA">
+        <PropertyRef Name="Company_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblCOA_tblSubAccount">
+    <End Role="tblSubAccount" Type="Self.tblSubAccount" Multiplicity="0..1" />
+    <End Role="tblCOA" Type="Self.tblCOA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblSubAccount">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblCOA">
+        <PropertyRef Name="SubAccount_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblCOAOpeningBalance_AspNetUsers">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="0..1" />
+    <End Role="tblCOAOpeningBalance" Type="Self.tblCOAOpeningBalance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblCOAOpeningBalance">
+        <PropertyRef Name="Entry_User" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblCOAOpeningBalance_tblBranches">
+    <End Role="tblBranches" Type="Self.tblBranches" Multiplicity="0..1" />
+    <End Role="tblCOAOpeningBalance" Type="Self.tblCOAOpeningBalance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblBranches">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblCOAOpeningBalance">
+        <PropertyRef Name="Branch_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblCOAOpeningBalance_tblCOA">
+    <End Role="tblCOA" Type="Self.tblCOA" Multiplicity="0..1" />
+    <End Role="tblCOAOpeningBalance" Type="Self.tblCOAOpeningBalance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCOA">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblCOAOpeningBalance">
+        <PropertyRef Name="COA_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblCOAOpeningBalance_tblCompany">
+    <End Role="tblCompany" Type="Self.tblCompany" Multiplicity="0..1" />
+    <End Role="tblCOAOpeningBalance" Type="Self.tblCOAOpeningBalance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCompany">
+        <PropertyRef Name="Company_Id" />
+      </Principal>
+      <Dependent Role="tblCOAOpeningBalance">
+        <PropertyRef Name="Company_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblOPD_tblCOA">
+    <End Role="tblCOA" Type="Self.tblCOA" Multiplicity="0..1" />
+    <End Role="tblOPD" Type="Self.tblOPD" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCOA">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblOPD">
+        <PropertyRef Name="Customer_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblOPD_tblSupplierCustomer">
+    <End Role="tblSupplierCustomer" Type="Self.tblSupplierCustomer" Multiplicity="0..1" />
+    <End Role="tblOPD" Type="Self.tblOPD" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblSupplierCustomer">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblOPD">
+        <PropertyRef Name="Dr_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblSubAccount_AspNetUsers">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="0..1" />
+    <End Role="tblSubAccount" Type="Self.tblSubAccount" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblSubAccount">
+        <PropertyRef Name="Entry_User" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblSubAccount_AspNetUsers1">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="0..1" />
+    <End Role="tblSubAccount" Type="Self.tblSubAccount" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblSubAccount">
+        <PropertyRef Name="Modify_User" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblSubAccount_tblBranches">
+    <End Role="tblBranches" Type="Self.tblBranches" Multiplicity="0..1" />
+    <End Role="tblSubAccount" Type="Self.tblSubAccount" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblBranches">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblSubAccount">
+        <PropertyRef Name="Branch_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblSubAccount_tblCompany">
+    <End Role="tblCompany" Type="Self.tblCompany" Multiplicity="0..1" />
+    <End Role="tblSubAccount" Type="Self.tblSubAccount" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCompany">
+        <PropertyRef Name="Company_Id" />
+      </Principal>
+      <Dependent Role="tblSubAccount">
+        <PropertyRef Name="Company_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblSubAccount_tblParentAccount">
+    <End Role="tblParentAccount" Type="Self.tblParentAccount" Multiplicity="0..1" />
+    <End Role="tblSubAccount" Type="Self.tblSubAccount" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblParentAccount">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblSubAccount">
+        <PropertyRef Name="Parent_Account_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblSupplierCustomer_AspNetUsers">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="0..1" />
+    <End Role="tblSupplierCustomer" Type="Self.tblSupplierCustomer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblSupplierCustomer">
+        <PropertyRef Name="Entry_User" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblSupplierCustomer_tblBranches">
+    <End Role="tblBranches" Type="Self.tblBranches" Multiplicity="0..1" />
+    <End Role="tblSupplierCustomer" Type="Self.tblSupplierCustomer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblBranches">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblSupplierCustomer">
+        <PropertyRef Name="Branch_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblSupplierCustomer_tblCOA">
+    <End Role="tblCOA" Type="Self.tblCOA" Multiplicity="0..1" />
+    <End Role="tblSupplierCustomer" Type="Self.tblSupplierCustomer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCOA">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblSupplierCustomer">
+        <PropertyRef Name="GlAccount_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblSupplierCustomer_tblCompany">
+    <End Role="tblCompany" Type="Self.tblCompany" Multiplicity="0..1" />
+    <End Role="tblSupplierCustomer" Type="Self.tblSupplierCustomer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCompany">
+        <PropertyRef Name="Company_Id" />
+      </Principal>
+      <Dependent Role="tblSupplierCustomer">
+        <PropertyRef Name="Company_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblVoucherDetail_tblVoucherHead">
+    <End Role="tblVoucherHead" Type="Self.tblVoucherHead" Multiplicity="0..1" />
+    <End Role="tblVoucherDetail" Type="Self.tblVoucherDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblVoucherHead">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblVoucherDetail">
+        <PropertyRef Name="Voucher_Head_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblVoucherHead_tblBranches">
+    <End Role="tblBranches" Type="Self.tblBranches" Multiplicity="0..1" />
+    <End Role="tblVoucherHead" Type="Self.tblVoucherHead" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblBranches">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblVoucherHead">
+        <PropertyRef Name="Branch_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblVoucherHead_tblCompany">
+    <End Role="tblCompany" Type="Self.tblCompany" Multiplicity="0..1" />
+    <End Role="tblVoucherHead" Type="Self.tblVoucherHead" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCompany">
+        <PropertyRef Name="Company_Id" />
+      </Principal>
+      <Dependent Role="tblVoucherHead">
+        <PropertyRef Name="Company_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblVoucherHead_tblDocumentType">
+    <End Role="tblDocumentType" Type="Self.tblDocumentType" Multiplicity="0..1" />
+    <End Role="tblVoucherHead" Type="Self.tblVoucherHead" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblDocumentType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblVoucherHead">
+        <PropertyRef Name="DocumentType_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="GetExpiryWiseProductForSale" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="itemId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetReminingAmounts" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="COA_Id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetReminingAmountsForDoctor" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="COA_Id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="ItemWiseRevenue" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ItemId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Proc_GetUserRights_UserId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserId" Type="int" Mode="In" />
+    <Parameter Name="ScreenName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Role" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="Proc_Payables_Rpt" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="OrganizationId" Type="int" Mode="In" />
+    <Parameter Name="CompanyId" Type="int" Mode="In" />
+    <Parameter Name="FinancialYearId" Type="int" Mode="In" />
+    <Parameter Name="VoucherDateF" Type="date" Mode="In" />
+    <Parameter Name="VoucherDateT" Type="date" Mode="In" />
+  </Function>
+  <Function Name="Proc_tblUserRights_Insert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserId" Type="int" Mode="In" />
+    <Parameter Name="ScreenId" Type="int" Mode="In" />
+    <Parameter Name="RightId" Type="int" Mode="In" />
+    <Parameter Name="Value" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="Proc_tblUserRights_UserId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserId" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Proc_UserLogin" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Username" Type="nvarchar" Mode="In" />
+    <Parameter Name="Password" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="Proc_UserRights_DeleteByUserID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserId" Type="int" Mode="In" />
+  </Function>
+  <EntityContainer Name="dbHostiptalERPModelStoreContainer">
+    <EntitySet Name="__MigrationHistory" EntityType="Self.__MigrationHistory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetRoles" EntityType="Self.AspNetRoles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUserClaims" EntityType="Self.AspNetUserClaims" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUserLogins" EntityType="Self.AspNetUserLogins" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUserRoles" EntityType="Self.AspNetUserRoles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUsers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ScreenDefinition" EntityType="Self.ScreenDefinition" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ScreenRight" EntityType="Self.ScreenRight" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_InventoryTransaction" EntityType="Self.tbl_InventoryTransaction" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Item_Allocation" EntityType="Self.tbl_Item_Allocation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_Item_Def" EntityType="Self.tbl_Item_Def" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_PurchaseDetail" EntityType="Self.tbl_PurchaseDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_PurchaseMaster" EntityType="Self.tbl_PurchaseMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_PurchaseReturnDetail" EntityType="Self.tbl_PurchaseReturnDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_PurchaseReturnMaster" EntityType="Self.tbl_PurchaseReturnMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_SaleDetail" EntityType="Self.tbl_SaleDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_SaleMaster" EntityType="Self.tbl_SaleMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_SaleReturnDetail" EntityType="Self.tbl_SaleReturnDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_SaleReturnMaster" EntityType="Self.tbl_SaleReturnMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblActivityLogs" EntityType="Self.tblActivityLogs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblBranches" EntityType="Self.tblBranches" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblCategory" EntityType="Self.tblCategory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblCOA" EntityType="Self.tblCOA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblCOAOpeningBalance" EntityType="Self.tblCOAOpeningBalance" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblCompany" EntityType="Self.tblCompany" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblDocumentType" EntityType="Self.tblDocumentType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblOPD" EntityType="Self.tblOPD" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblParentAccount" EntityType="Self.tblParentAccount" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblSubAccount" EntityType="Self.tblSubAccount" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblSupplierCustomer" EntityType="Self.tblSupplierCustomer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblSystemConfigrations" EntityType="Self.tblSystemConfigrations" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblUserRights" EntityType="Self.TblUserRights" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblVoucherDetail" EntityType="Self.tblVoucherDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblVoucherHead" EntityType="Self.tblVoucherHead" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_AspNetUsers_tblBranches" Association="Self.FK_AspNetUsers_tblBranches">
+      <End Role="tblBranches" EntitySet="tblBranches" />
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AspNetUsers_tblCompany" Association="Self.FK_AspNetUsers_tblCompany">
+      <End Role="tblCompany" EntitySet="tblCompany" />
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserClaims" EntitySet="AspNetUserClaims" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserLogins" EntitySet="AspNetUserLogins" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId" Association="Self.FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId">
+      <End Role="AspNetRoles" EntitySet="AspNetRoles" />
+      <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_InventoryTransaction_tbl_Item_Allocation" Association="Self.FK_tbl_InventoryTransaction_tbl_Item_Allocation">
+      <End Role="tbl_Item_Allocation" EntitySet="tbl_Item_Allocation" />
+      <End Role="tbl_InventoryTransaction" EntitySet="tbl_InventoryTransaction" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_InventoryTransaction_tblCategory" Association="Self.FK_tbl_InventoryTransaction_tblCategory">
+      <End Role="tblCategory" EntitySet="tblCategory" />
+      <End Role="tbl_InventoryTransaction" EntitySet="tbl_InventoryTransaction" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_InventoryTransaction_tblSupplierCustomer" Association="Self.FK_tbl_InventoryTransaction_tblSupplierCustomer">
+      <End Role="tblSupplierCustomer" EntitySet="tblSupplierCustomer" />
+      <End Role="tbl_InventoryTransaction" EntitySet="tbl_InventoryTransaction" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Item_Allocation_AspNetUsers" Association="Self.FK_tbl_Item_Allocation_AspNetUsers">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="tbl_Item_Allocation" EntitySet="tbl_Item_Allocation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Item_Allocation_tbl_Item_Def" Association="Self.FK_tbl_Item_Allocation_tbl_Item_Def">
+      <End Role="tbl_Item_Def" EntitySet="tbl_Item_Def" />
+      <End Role="tbl_Item_Allocation" EntitySet="tbl_Item_Allocation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Item_Allocation_tblBranches" Association="Self.FK_tbl_Item_Allocation_tblBranches">
+      <End Role="tblBranches" EntitySet="tblBranches" />
+      <End Role="tbl_Item_Allocation" EntitySet="tbl_Item_Allocation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Item_Allocation_tblCOA" Association="Self.FK_tbl_Item_Allocation_tblCOA">
+      <End Role="tblCOA" EntitySet="tblCOA" />
+      <End Role="tbl_Item_Allocation" EntitySet="tbl_Item_Allocation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Item_Allocation_tblCOA1" Association="Self.FK_tbl_Item_Allocation_tblCOA1">
+      <End Role="tblCOA" EntitySet="tblCOA" />
+      <End Role="tbl_Item_Allocation" EntitySet="tbl_Item_Allocation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Item_Allocation_tblCOA2" Association="Self.FK_tbl_Item_Allocation_tblCOA2">
+      <End Role="tblCOA" EntitySet="tblCOA" />
+      <End Role="tbl_Item_Allocation" EntitySet="tbl_Item_Allocation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Item_Allocation_tblCompany" Association="Self.FK_tbl_Item_Allocation_tblCompany">
+      <End Role="tblCompany" EntitySet="tblCompany" />
+      <End Role="tbl_Item_Allocation" EntitySet="tbl_Item_Allocation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_Item_Def_tblCategory" Association="Self.FK_tbl_Item_Def_tblCategory">
+      <End Role="tblCategory" EntitySet="tblCategory" />
+      <End Role="tbl_Item_Def" EntitySet="tbl_Item_Def" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_PurchaseDetail_tbl_Item_Allocation" Association="Self.FK_tbl_PurchaseDetail_tbl_Item_Allocation">
+      <End Role="tbl_Item_Allocation" EntitySet="tbl_Item_Allocation" />
+      <End Role="tbl_PurchaseDetail" EntitySet="tbl_PurchaseDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_PurchaseDetail_tbl_PurchaseMaster" Association="Self.FK_tbl_PurchaseDetail_tbl_PurchaseMaster">
+      <End Role="tbl_PurchaseMaster" EntitySet="tbl_PurchaseMaster" />
+      <End Role="tbl_PurchaseDetail" EntitySet="tbl_PurchaseDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_PurchaseDetail_tblCategory" Association="Self.FK_tbl_PurchaseDetail_tblCategory">
+      <End Role="tblCategory" EntitySet="tblCategory" />
+      <End Role="tbl_PurchaseDetail" EntitySet="tbl_PurchaseDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_PurchaseMaster_AspNetUsers" Association="Self.FK_tbl_PurchaseMaster_AspNetUsers">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="tbl_PurchaseMaster" EntitySet="tbl_PurchaseMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_PurchaseMaster_tblBranches" Association="Self.FK_tbl_PurchaseMaster_tblBranches">
+      <End Role="tblBranches" EntitySet="tblBranches" />
+      <End Role="tbl_PurchaseMaster" EntitySet="tbl_PurchaseMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_PurchaseMaster_tblCompany" Association="Self.FK_tbl_PurchaseMaster_tblCompany">
+      <End Role="tblCompany" EntitySet="tblCompany" />
+      <End Role="tbl_PurchaseMaster" EntitySet="tbl_PurchaseMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_PurchaseMaster_tblDocumentType1" Association="Self.FK_tbl_PurchaseMaster_tblDocumentType1">
+      <End Role="tblDocumentType" EntitySet="tblDocumentType" />
+      <End Role="tbl_PurchaseMaster" EntitySet="tbl_PurchaseMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_PurchaseMaster_tblSupplierCustomer1" Association="Self.FK_tbl_PurchaseMaster_tblSupplierCustomer1">
+      <End Role="tblSupplierCustomer" EntitySet="tblSupplierCustomer" />
+      <End Role="tbl_PurchaseMaster" EntitySet="tbl_PurchaseMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_PurchaseReturnDetail_tbl_Item_Allocation" Association="Self.FK_tbl_PurchaseReturnDetail_tbl_Item_Allocation">
+      <End Role="tbl_Item_Allocation" EntitySet="tbl_Item_Allocation" />
+      <End Role="tbl_PurchaseReturnDetail" EntitySet="tbl_PurchaseReturnDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_PurchaseReturnDetail_tbl_PurchaseReturnMaster" Association="Self.FK_tbl_PurchaseReturnDetail_tbl_PurchaseReturnMaster">
+      <End Role="tbl_PurchaseReturnMaster" EntitySet="tbl_PurchaseReturnMaster" />
+      <End Role="tbl_PurchaseReturnDetail" EntitySet="tbl_PurchaseReturnDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_PurchaseReturnDetail_tblCategory" Association="Self.FK_tbl_PurchaseReturnDetail_tblCategory">
+      <End Role="tblCategory" EntitySet="tblCategory" />
+      <End Role="tbl_PurchaseReturnDetail" EntitySet="tbl_PurchaseReturnDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_PurchaseReturnMaster_AspNetUsers" Association="Self.FK_tbl_PurchaseReturnMaster_AspNetUsers">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="tbl_PurchaseReturnMaster" EntitySet="tbl_PurchaseReturnMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_PurchaseReturnMaster_tblBranches" Association="Self.FK_tbl_PurchaseReturnMaster_tblBranches">
+      <End Role="tblBranches" EntitySet="tblBranches" />
+      <End Role="tbl_PurchaseReturnMaster" EntitySet="tbl_PurchaseReturnMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_PurchaseReturnMaster_tblCompany" Association="Self.FK_tbl_PurchaseReturnMaster_tblCompany">
+      <End Role="tblCompany" EntitySet="tblCompany" />
+      <End Role="tbl_PurchaseReturnMaster" EntitySet="tbl_PurchaseReturnMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_PurchaseReturnMaster_tblDocumentType" Association="Self.FK_tbl_PurchaseReturnMaster_tblDocumentType">
+      <End Role="tblDocumentType" EntitySet="tblDocumentType" />
+      <End Role="tbl_PurchaseReturnMaster" EntitySet="tbl_PurchaseReturnMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_PurchaseReturnMaster_tblSupplierCustomer" Association="Self.FK_tbl_PurchaseReturnMaster_tblSupplierCustomer">
+      <End Role="tblSupplierCustomer" EntitySet="tblSupplierCustomer" />
+      <End Role="tbl_PurchaseReturnMaster" EntitySet="tbl_PurchaseReturnMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_SaleDetail_tbl_Item_Allocation" Association="Self.FK_tbl_SaleDetail_tbl_Item_Allocation">
+      <End Role="tbl_Item_Allocation" EntitySet="tbl_Item_Allocation" />
+      <End Role="tbl_SaleDetail" EntitySet="tbl_SaleDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_SaleDetail_tbl_SaleMaster" Association="Self.FK_tbl_SaleDetail_tbl_SaleMaster">
+      <End Role="tbl_SaleMaster" EntitySet="tbl_SaleMaster" />
+      <End Role="tbl_SaleDetail" EntitySet="tbl_SaleDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_SaleDetail_tblCategory" Association="Self.FK_tbl_SaleDetail_tblCategory">
+      <End Role="tblCategory" EntitySet="tblCategory" />
+      <End Role="tbl_SaleDetail" EntitySet="tbl_SaleDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_SaleMaster_AspNetUsers" Association="Self.FK_tbl_SaleMaster_AspNetUsers">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="tbl_SaleMaster" EntitySet="tbl_SaleMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_SaleMaster_tbl_SaleMaster" Association="Self.FK_tbl_SaleMaster_tbl_SaleMaster">
+      <End Role="tbl_SaleMaster" EntitySet="tbl_SaleMaster" />
+      <End Role="tbl_SaleMaster1" EntitySet="tbl_SaleMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_SaleMaster_tblBranches" Association="Self.FK_tbl_SaleMaster_tblBranches">
+      <End Role="tblBranches" EntitySet="tblBranches" />
+      <End Role="tbl_SaleMaster" EntitySet="tbl_SaleMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_SaleMaster_tblCompany" Association="Self.FK_tbl_SaleMaster_tblCompany">
+      <End Role="tblCompany" EntitySet="tblCompany" />
+      <End Role="tbl_SaleMaster" EntitySet="tbl_SaleMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_SaleMaster_tblDocumentType" Association="Self.FK_tbl_SaleMaster_tblDocumentType">
+      <End Role="tblDocumentType" EntitySet="tblDocumentType" />
+      <End Role="tbl_SaleMaster" EntitySet="tbl_SaleMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_SaleMaster_tblSupplierCustomer" Association="Self.FK_tbl_SaleMaster_tblSupplierCustomer">
+      <End Role="tblSupplierCustomer" EntitySet="tblSupplierCustomer" />
+      <End Role="tbl_SaleMaster" EntitySet="tbl_SaleMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_SaleReturnDetail_tbl_Item_Allocation" Association="Self.FK_tbl_SaleReturnDetail_tbl_Item_Allocation">
+      <End Role="tbl_Item_Allocation" EntitySet="tbl_Item_Allocation" />
+      <End Role="tbl_SaleReturnDetail" EntitySet="tbl_SaleReturnDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_SaleReturnDetail_tbl_SaleReturnMaster" Association="Self.FK_tbl_SaleReturnDetail_tbl_SaleReturnMaster">
+      <End Role="tbl_SaleReturnMaster" EntitySet="tbl_SaleReturnMaster" />
+      <End Role="tbl_SaleReturnDetail" EntitySet="tbl_SaleReturnDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_SaleReturnDetail_tblCategory" Association="Self.FK_tbl_SaleReturnDetail_tblCategory">
+      <End Role="tblCategory" EntitySet="tblCategory" />
+      <End Role="tbl_SaleReturnDetail" EntitySet="tbl_SaleReturnDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_SaleReturnMaster_AspNetUsers" Association="Self.FK_tbl_SaleReturnMaster_AspNetUsers">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="tbl_SaleReturnMaster" EntitySet="tbl_SaleReturnMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_SaleReturnMaster_tblBranches" Association="Self.FK_tbl_SaleReturnMaster_tblBranches">
+      <End Role="tblBranches" EntitySet="tblBranches" />
+      <End Role="tbl_SaleReturnMaster" EntitySet="tbl_SaleReturnMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_SaleReturnMaster_tblCompany" Association="Self.FK_tbl_SaleReturnMaster_tblCompany">
+      <End Role="tblCompany" EntitySet="tblCompany" />
+      <End Role="tbl_SaleReturnMaster" EntitySet="tbl_SaleReturnMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_SaleReturnMaster_tblDocumentType" Association="Self.FK_tbl_SaleReturnMaster_tblDocumentType">
+      <End Role="tblDocumentType" EntitySet="tblDocumentType" />
+      <End Role="tbl_SaleReturnMaster" EntitySet="tbl_SaleReturnMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tbl_SaleReturnMaster_tblSupplierCustomer" Association="Self.FK_tbl_SaleReturnMaster_tblSupplierCustomer">
+      <End Role="tblSupplierCustomer" EntitySet="tblSupplierCustomer" />
+      <End Role="tbl_SaleReturnMaster" EntitySet="tbl_SaleReturnMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblActivityLogs_AspNetUsers" Association="Self.FK_tblActivityLogs_AspNetUsers">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="tblActivityLogs" EntitySet="tblActivityLogs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblBranches_AspNetUsers" Association="Self.FK_tblBranches_AspNetUsers">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="tblBranches" EntitySet="tblBranches" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblBranches_AspNetUsers1" Association="Self.FK_tblBranches_AspNetUsers1">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="tblBranches" EntitySet="tblBranches" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblBranches_tblCompany" Association="Self.FK_tblBranches_tblCompany">
+      <End Role="tblCompany" EntitySet="tblCompany" />
+      <End Role="tblBranches" EntitySet="tblBranches" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblCategory_AspNetUsers" Association="Self.FK_tblCategory_AspNetUsers">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="tblCategory" EntitySet="tblCategory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblCOA_AspNetUsers" Association="Self.FK_tblCOA_AspNetUsers">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="tblCOA" EntitySet="tblCOA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblCOA_tblBranches" Association="Self.FK_tblCOA_tblBranches">
+      <End Role="tblBranches" EntitySet="tblBranches" />
+      <End Role="tblCOA" EntitySet="tblCOA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblCOA_tblCompany" Association="Self.FK_tblCOA_tblCompany">
+      <End Role="tblCompany" EntitySet="tblCompany" />
+      <End Role="tblCOA" EntitySet="tblCOA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblCOA_tblSubAccount" Association="Self.FK_tblCOA_tblSubAccount">
+      <End Role="tblSubAccount" EntitySet="tblSubAccount" />
+      <End Role="tblCOA" EntitySet="tblCOA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblCOAOpeningBalance_AspNetUsers" Association="Self.FK_tblCOAOpeningBalance_AspNetUsers">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="tblCOAOpeningBalance" EntitySet="tblCOAOpeningBalance" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblCOAOpeningBalance_tblBranches" Association="Self.FK_tblCOAOpeningBalance_tblBranches">
+      <End Role="tblBranches" EntitySet="tblBranches" />
+      <End Role="tblCOAOpeningBalance" EntitySet="tblCOAOpeningBalance" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblCOAOpeningBalance_tblCOA" Association="Self.FK_tblCOAOpeningBalance_tblCOA">
+      <End Role="tblCOA" EntitySet="tblCOA" />
+      <End Role="tblCOAOpeningBalance" EntitySet="tblCOAOpeningBalance" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblCOAOpeningBalance_tblCompany" Association="Self.FK_tblCOAOpeningBalance_tblCompany">
+      <End Role="tblCompany" EntitySet="tblCompany" />
+      <End Role="tblCOAOpeningBalance" EntitySet="tblCOAOpeningBalance" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblOPD_tblCOA" Association="Self.FK_tblOPD_tblCOA">
+      <End Role="tblCOA" EntitySet="tblCOA" />
+      <End Role="tblOPD" EntitySet="tblOPD" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblOPD_tblSupplierCustomer" Association="Self.FK_tblOPD_tblSupplierCustomer">
+      <End Role="tblSupplierCustomer" EntitySet="tblSupplierCustomer" />
+      <End Role="tblOPD" EntitySet="tblOPD" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblSubAccount_AspNetUsers" Association="Self.FK_tblSubAccount_AspNetUsers">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="tblSubAccount" EntitySet="tblSubAccount" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblSubAccount_AspNetUsers1" Association="Self.FK_tblSubAccount_AspNetUsers1">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="tblSubAccount" EntitySet="tblSubAccount" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblSubAccount_tblBranches" Association="Self.FK_tblSubAccount_tblBranches">
+      <End Role="tblBranches" EntitySet="tblBranches" />
+      <End Role="tblSubAccount" EntitySet="tblSubAccount" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblSubAccount_tblCompany" Association="Self.FK_tblSubAccount_tblCompany">
+      <End Role="tblCompany" EntitySet="tblCompany" />
+      <End Role="tblSubAccount" EntitySet="tblSubAccount" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblSubAccount_tblParentAccount" Association="Self.FK_tblSubAccount_tblParentAccount">
+      <End Role="tblParentAccount" EntitySet="tblParentAccount" />
+      <End Role="tblSubAccount" EntitySet="tblSubAccount" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblSupplierCustomer_AspNetUsers" Association="Self.FK_tblSupplierCustomer_AspNetUsers">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="tblSupplierCustomer" EntitySet="tblSupplierCustomer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblSupplierCustomer_tblBranches" Association="Self.FK_tblSupplierCustomer_tblBranches">
+      <End Role="tblBranches" EntitySet="tblBranches" />
+      <End Role="tblSupplierCustomer" EntitySet="tblSupplierCustomer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblSupplierCustomer_tblCOA" Association="Self.FK_tblSupplierCustomer_tblCOA">
+      <End Role="tblCOA" EntitySet="tblCOA" />
+      <End Role="tblSupplierCustomer" EntitySet="tblSupplierCustomer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblSupplierCustomer_tblCompany" Association="Self.FK_tblSupplierCustomer_tblCompany">
+      <End Role="tblCompany" EntitySet="tblCompany" />
+      <End Role="tblSupplierCustomer" EntitySet="tblSupplierCustomer" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblVoucherDetail_tblVoucherHead" Association="Self.FK_tblVoucherDetail_tblVoucherHead">
+      <End Role="tblVoucherHead" EntitySet="tblVoucherHead" />
+      <End Role="tblVoucherDetail" EntitySet="tblVoucherDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblVoucherHead_tblBranches" Association="Self.FK_tblVoucherHead_tblBranches">
+      <End Role="tblBranches" EntitySet="tblBranches" />
+      <End Role="tblVoucherHead" EntitySet="tblVoucherHead" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblVoucherHead_tblCompany" Association="Self.FK_tblVoucherHead_tblCompany">
+      <End Role="tblCompany" EntitySet="tblCompany" />
+      <End Role="tblVoucherHead" EntitySet="tblVoucherHead" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblVoucherHead_tblDocumentType" Association="Self.FK_tblVoucherHead_tblDocumentType">
+      <End Role="tblDocumentType" EntitySet="tblDocumentType" />
+      <End Role="tblVoucherHead" EntitySet="tblVoucherHead" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
